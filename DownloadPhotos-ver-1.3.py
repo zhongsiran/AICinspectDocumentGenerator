@@ -92,7 +92,7 @@ class photolibrary:
 
     def divisionfilter(self,filename):
         patterndiv = re.compile(r'-' + self.division + '-\d+(_\d+-\d+-\d+)?.jpg',re.A)
-        patterngen = re.compile(r'-\w{2}-\d+.jpg',re.A)
+        patterngen = re.compile(r'-\w{2}-\d+.jpg',re.A) #旧有无分所和日期的文件名 ex. 字号-01.JPG
         if (re.findall(patterndiv,filename) != []):
             self.oldname = False
             return True
