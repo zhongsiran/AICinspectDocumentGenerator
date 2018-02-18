@@ -48,17 +48,19 @@ class photolibrary:
                 self.divisionselector()
         
     def downloadpic(self):
+        exist_count = 0
+        new_count = 0
         for filename, sourceurl in self.file_dict.items():
             if(self.divisionfilter(filename)):
                 os.chdir(self.rootfolder)
-                corpfolder = re.sub(r'-?' + self.division + '?-\d+.jpg',"",filename) #删除剩下企业名称
+                corpfolder = re.sub(r'-?' + self.division + '?-\d+(_\d+-\d+-\d+)?.jpg',"",filename) #删除剩下企业名称
                 if (self.oldname):
                     corpfolder = re.sub(r'-\d+.jpg',"",filename)
                     
                 if(self.prefolder == corpfolder):
                     pass
                 else:
-                    print('当前企业：' + corpfolder)
+                    pass#print('当前企业：' + corpfolder)
                 try:
                     os.mkdir(corpfolder)
                     os.chdir(os.getcwd() + '\\' + corpfolder)
@@ -69,8 +71,9 @@ class photolibrary:
                 #SortedImgPath = os.getcwd() +"\\"+ today + '\\'+ filename
                 
                 if os.path.isfile(LocalImgPath):
-                    print('文件已经存在')
+                    #print('文件已经存在')
                     #print(LocalImgPath + " already exists")
+                    exist_count += 1
                     pass
                 else:
                     LocalImg = open(LocalImgPath, 'wb')
@@ -78,15 +81,17 @@ class photolibrary:
                     LocalImg.write(NetImg.content)
                     LocalImg.close()
                     print('新增文件' + filename)
+                    new_count += 1
                 self.oldname = False
                 self.prefolder = corpfolder
             else:
                 pass
+        print('已存在文件：' + str(exist_count) + '\n新增文件：' + str(new_count) + '个')
         os.system('pause')
             
 
     def divisionfilter(self,filename):
-        patterndiv = re.compile(r'-' + self.division + '-\d+.jpg',re.A)
+        patterndiv = re.compile(r'-' + self.division + '-\d+(_\d+-\d+-\d+)?.jpg',re.A)
         patterngen = re.compile(r'-\w{2}-\d+.jpg',re.A)
         if (re.findall(patterndiv,filename) != []):
             self.oldname = False
