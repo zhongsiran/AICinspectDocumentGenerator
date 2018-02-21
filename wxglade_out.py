@@ -74,6 +74,9 @@ class MainFrame(wx.Frame):
         # create a pubsub receiver
         pub.subscribe(self.update_pd_result_text, "update")
         pub.subscribe(self.download_finished, "dl_finished")
+        pub.subscribe(self.update_dg_resulttext, "update_dg")
+        pub.subscribe(self.doc_generator_finished, "dg_finished")
+
 
     def __set_properties(self):
         # begin wxGlade: MainFrame.__set_properties
@@ -375,27 +378,73 @@ class MainFrame(wx.Frame):
         if dlg.ShowModal() == wx.ID_OK:  
             self.doc_gen_path.SetValue(dlg.GetPath()) #文件夹路径  
         dlg.Destroy()
-
     def choose_dg_cp_phs_btn(self, event):  # wxGlade: MainFrame.<event_handler>
         dlg = wx.DirDialog(self,u"选择企业核查照片存放文件夹",style=wx.DD_DEFAULT_STYLE)
         if dlg.ShowModal() == wx.ID_OK:  
             self.doc_gen_corp_photos_path.SetValue(dlg.GetPath()) #文件夹路径  
         dlg.Destroy()
-
     def begin_dg_btn(self, event):  # wxGlade: MainFrame.<event_handler>
-        print("Event handler 'begin_dg_btn' not implemented!")
-        event.Skip()
+        self.doc_gen_begin.Disable()
+        self.doc_gen_choose_path.Disable()
+        self.doc_gen_choose_inspect_tpl.Disable()
+        self.doc_gen_choose_inspect_xlsx.Disable()
+        self.doc_gen_choose_photo_tpl.Disable()
+        self.doc_gen_choose_corp_photos_path.Disable()
+        self.doc_gen_choose_path.Disable()
+        self.doc_gen_preview.Disable()
+        self.doc_gen_stop.Enable()
+
+        original_path = self.doc_gen_corp_photos_path.GetValue()
+        target_path = self.doc_gen_path.GetValue()
+        workbook_path = self.doc_gen_xlsx_path.GetValue()
+        ins_tpl_path = self.doc_gen_ins_tpl_path.GetValue()
+        img_tpl_path = self.doc_gen_ph_tpl_path.GetValue()
+        go_on = True
+        for path in [workbook_path, ins_tpl_path, img_tpl_path]:
+            try:
+                re.search(r'(xlsx|docx)$', path).group() != ''
+            except AttributeError as e:
+                print (e)
+                self.update_dg_resulttext('错误！！\n请确保选择了正确的文件，格式必须是XLSX和DOCX')
+                self.doc_generator_finished()
+                go_on = False
+        if(go_on):
+            try:
+                os.mkdir(target_path)
+            except (FileExistsError):
+                pass
+            dg_mt = dg.doc_generator_main_thread(original_path, target_path, workbook_path, ins_tpl_path, img_tpl_path)
+            dg_mt.start()
+
     def cancel_dg_btn(self, event):  # wxGlade: MainFrame.<event_handler>
-        print("Event handler 'cancel_dg_btn' not implemented!")
-        event.Skip()
+        self.doc_gen_begin.Enable()
+        self.doc_gen_choose_path.Enable()
+        self.doc_gen_choose_inspect_tpl.Enable()
+        self.doc_gen_choose_inspect_xlsx.Enable()
+        self.doc_gen_choose_photo_tpl.Enable()
+        self.doc_gen_choose_corp_photos_path.Enable()
+        self.doc_gen_choose_path.Enable()
+        self.doc_gen_preview.Enable()
+        self.doc_gen_stop.Disable()
     def choose_dg_preview_btn(self, event):  # wxGlade: MainFrame.<event_handler>
-        print("Event handler 'choose_dg_preview_btn' not implemented!")
-        event.Skip()
-    
+        pass
+
+
     def update_dg_resulttext(self, msg):
         original_msg = self.doc_gen_result_text_area.GetValue()
         new_msg = msg + u"\n" + '*' * 15 +'\n' + original_msg + u'\n'
         self.doc_gen_result_text_area.SetValue(new_msg)
+    def doc_generator_finished(self, result=''):
+        self.doc_gen_begin.Enable()
+        self.doc_gen_choose_path.Enable()
+        self.doc_gen_choose_inspect_tpl.Enable()
+        self.doc_gen_choose_inspect_xlsx.Enable()
+        self.doc_gen_choose_photo_tpl.Enable()
+        self.doc_gen_choose_corp_photos_path.Enable()
+        self.doc_gen_choose_path.Enable()
+        self.doc_gen_preview.Enable()
+        self.doc_gen_stop.Disable()
+        self.update_dg_resulttext(result)
 
     #页面转换时变更Frame大小
     def page_changing(self, event):  # wxGlade: MainFrame.<event_handler>
