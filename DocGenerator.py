@@ -12,7 +12,7 @@ from openpyxl import Workbook  #读取XLSX文件用
 from openpyxl import load_workbook  #读取XLSX文件用
 from openpyxl.utils import get_column_letter #读取XLSX文件用
 
-class corp: #固定的企业信息，从内部查询
+class doc_generator: #固定的企业信息，从内部查询
     def __init__(self):
         self.corpname = ""
         self.addr = ""
@@ -250,7 +250,7 @@ class corp: #固定的企业信息，从内部查询
 
         
 if __name__ == '__main__':
-    corp = corp()
-    corp.processallfolders()
-    corp.printresult()
-    corp.saveresult()
+    dg = doc_generator()
+    dg.processallfolders()
+    dg.printresult()
+    dg.saveresult()

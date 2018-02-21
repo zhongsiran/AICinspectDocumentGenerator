@@ -12,6 +12,7 @@ import gettext
 # end wxGlade
 
 # begin wxGlade: extracode
+import DocGeneratorGUI as dg
 import DownloadPhotosforGUI as dp
 import os
 # end wxGlade
@@ -22,7 +23,7 @@ class MainFrame(wx.Frame):
         # begin wxGlade: MainFrame.__init__
         kwds["style"] = kwds.get("style", 0) | wx.BORDER_SIMPLE | wx.DEFAULT_FRAME_STYLE
         wx.Frame.__init__(self, *args, **kwds)
-        self.SetSize((730, 750))
+        self.SetSize((730, 754))
         self.frame_statusbar = self.CreateStatusBar(1, wx.STB_SIZEGRIP)
         self.Entrance = wx.Notebook(self, wx.ID_ANY)
         self.function_index_page = wx.Panel(self.Entrance, wx.ID_ANY)
@@ -48,9 +49,9 @@ class MainFrame(wx.Frame):
         self.label_xlsx = wx.StaticText(self.doc_gen_page, wx.ID_ANY, _(u"\u5df2\u7ecf\u6307\u5b9a\u683c\u5f0f\u4e3aXLSX\u7684\u4f01\u4e1a\u4fe1\u606f\u53ca\u6838\u67e5\u8bb0\u5f55\u8868\n"), style=wx.ALIGN_CENTER)
         self.doc_gen_result_text_area = wx.TextCtrl(self.doc_gen_page, wx.ID_ANY, "", style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_WORDWRAP)
         self.doc_gen_preview = wx.Button(self.doc_gen_page, wx.ID_ANY, _(u"\u751f\u6210\u4e00\u6237\u9884\u89c8"), style=wx.BU_AUTODRAW)
-        self.doc_gen_choose_path_copy = wx.Button(self.doc_gen_page, wx.ID_ANY, _(u"\u66f4\u6539\u751f\u6210\u8def\u5f84\n"), style=wx.BU_AUTODRAW)
-        self.doc_gen_begin_copy = wx.Button(self.doc_gen_page, wx.ID_ANY, _(u"\u5f00\u59cb\u751f\u6210"), style=wx.BU_AUTODRAW)
-        self.doc_gen_stop_copy = wx.Button(self.doc_gen_page, wx.ID_ANY, _(u"\n\u4e2d\u6b62\u751f\u6210\n"), style=wx.BU_AUTODRAW)
+        self.doc_gen_choose_path = wx.Button(self.doc_gen_page, wx.ID_ANY, _(u"\u66f4\u6539\u751f\u6210\u8def\u5f84\n"), style=wx.BU_AUTODRAW)
+        self.doc_gen_begin = wx.Button(self.doc_gen_page, wx.ID_ANY, _(u"\u5f00\u59cb\u751f\u6210"), style=wx.BU_AUTODRAW)
+        self.doc_gen_stop = wx.Button(self.doc_gen_page, wx.ID_ANY, _(u"\n\u4e2d\u6b62\u751f\u6210\n"), style=wx.BU_AUTODRAW)
         self.digital_hash_page = wx.Panel(self.Entrance, wx.ID_ANY)
 
         self.__set_properties()
@@ -65,13 +66,13 @@ class MainFrame(wx.Frame):
         self.Bind(wx.EVT_BUTTON, self.choose_dg_xlsx_btn, self.doc_gen_choose_inspect_xlsx)
         self.Bind(wx.EVT_BUTTON, self.choose_dg_cp_phs_btn, self.doc_gen_choose_corp_photos_path)
         self.Bind(wx.EVT_BUTTON, self.choose_dg_preview_btn, self.doc_gen_preview)
-        self.Bind(wx.EVT_BUTTON, self.choose_dg_path_btn, self.doc_gen_choose_path_copy)
-        self.Bind(wx.EVT_BUTTON, self.begin_dg_btn, self.doc_gen_begin_copy)
-        self.Bind(wx.EVT_BUTTON, self.cancel_dg_btn, self.doc_gen_stop_copy)
+        self.Bind(wx.EVT_BUTTON, self.choose_dg_path_btn, self.doc_gen_choose_path)
+        self.Bind(wx.EVT_BUTTON, self.begin_dg_btn, self.doc_gen_begin)
+        self.Bind(wx.EVT_BUTTON, self.cancel_dg_btn, self.doc_gen_stop)
         self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGED, self.page_changing, self.Entrance)
         # end wxGlade
         # create a pubsub receiver
-        pub.subscribe(self.set_ph_dl_resulttext_keep_original, "update")
+        pub.subscribe(self.update_pd_result_text, "update")
         pub.subscribe(self.download_finished, "dl_finished")
 
     def __set_properties(self):
@@ -118,12 +119,12 @@ class MainFrame(wx.Frame):
         self.label_xlsx.SetFont(wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL, 0, ""))
         self.doc_gen_result_text_area.SetMinSize((297, 220))
         self.doc_gen_preview.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "楷体_GB2312"))
-        self.doc_gen_choose_path_copy.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "楷体_GB2312"))
-        self.doc_gen_begin_copy.SetForegroundColour(wx.Colour(0, 0, 0))
-        self.doc_gen_begin_copy.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "楷体_GB2312"))
-        self.doc_gen_stop_copy.SetForegroundColour(wx.Colour(255, 0, 0))
-        self.doc_gen_stop_copy.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "楷体_GB2312"))
-        self.doc_gen_stop_copy.Enable(False)
+        self.doc_gen_choose_path.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "楷体_GB2312"))
+        self.doc_gen_begin.SetForegroundColour(wx.Colour(0, 0, 0))
+        self.doc_gen_begin.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "楷体_GB2312"))
+        self.doc_gen_stop.SetForegroundColour(wx.Colour(255, 0, 0))
+        self.doc_gen_stop.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "楷体_GB2312"))
+        self.doc_gen_stop.Enable(False)
         # end wxGlade
 
     def __do_layout(self):
@@ -259,14 +260,14 @@ class MainFrame(wx.Frame):
         doc_gen_right_side.Add(self.doc_gen_preview, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
         static_line_16 = wx.StaticLine(self.doc_gen_page, wx.ID_ANY)
         doc_gen_right_side.Add(static_line_16, 0, wx.EXPAND, 0)
-        doc_gen_right_side.Add(self.doc_gen_choose_path_copy, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
+        doc_gen_right_side.Add(self.doc_gen_choose_path, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
         static_line_11 = wx.StaticLine(self.doc_gen_page, wx.ID_ANY)
         doc_gen_right_side.Add(static_line_11, 0, wx.EXPAND, 0)
-        doc_gen_right_side.Add(self.doc_gen_begin_copy, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
+        doc_gen_right_side.Add(self.doc_gen_begin, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
         static_line_12 = wx.StaticLine(self.doc_gen_page, wx.ID_ANY)
         static_line_12.Enable(False)
         doc_gen_right_side.Add(static_line_12, 0, wx.EXPAND, 0)
-        doc_gen_right_side.Add(self.doc_gen_stop_copy, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
+        doc_gen_right_side.Add(self.doc_gen_stop, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
         doc_gen_root_sizer.Add(doc_gen_right_side, 1, wx.EXPAND, 0)
         self.doc_gen_page.SetSizer(doc_gen_root_sizer)
         self.Entrance.AddPage(self.function_index_page, _(u"\u529f\u80fd\u4ecb\u7ecd"))
@@ -291,7 +292,7 @@ class MainFrame(wx.Frame):
         start_dl_btn.Disable()
         cancel_dl_btn.Enable()
 
-        self.set_ph_dl_resulttext_keep_original('开始接连云服务器\n连接和下载过程中请停止其他操作')
+        self.update_pd_result_text('开始接连云服务器\n连接和下载过程中请停止其他操作')
 
         division_index = self.rbox_division.GetSelection()
         target_dir = re.sub(r'\s' , '', self.save_to_path_text_area.GetValue())
@@ -307,14 +308,14 @@ class MainFrame(wx.Frame):
                 self.choose_download_path.Enable()
                 self.begin_download_photo.SetLabel(u'开始下载')
                 self.begin_download_photo.Enable()
-                self.set_ph_dl_resulttext_keep_original('下载结果：\n' + result[1]) #打印下载结果
+                self.update_pd_result_text('下载结果：\n' + result[1]) #打印下载结果
                 self.cancel_download_photo.Disable()
                 self.choose_download_path.SetLabel(u"\u66f4\u6539\u4e0b\u8f7d\u8def\u5f84\n")
             else:
                 self.choose_download_path.Enable()
                 self.begin_download_photo.SetLabel(u'开始下载')
                 self.begin_download_photo.Enable()
-                self.set_ph_dl_resulttext_keep_original(result[1]) #打印错误信息
+                self.update_pd_result_text(result[1]) #打印错误信息
                 self.cancel_download_photo.Disable()
                 self.choose_download_path.SetLabel(u"\u66f4\u6539\u4e0b\u8f7d\u8def\u5f84\n")
 
@@ -325,21 +326,27 @@ class MainFrame(wx.Frame):
         dlg.Destroy()
 
     def rbox_div_select(self, event):  # wxGlade: MainFrame.<event_handler>
-        self.set_ph_dl_resulttext_keep_original('你当前选择的监管所：' + self.rbox_division.GetStringSelection())
+        self.update_pd_result_text('你当前选择的监管所：' + self.rbox_division.GetStringSelection())
 
-    def set_ph_dl_resulttext_keep_original(self, msg):
+    def update_pd_result_text(self, msg):
         original_msg = self.photo_download_result_text.GetValue()
         new_msg = msg + u"\n" + '*' * 15 +'\n' + original_msg + u'\n'
         self.photo_download_result_text.SetValue(new_msg)
 
     def cancel_download_btn(self, event):  # wxGlade: MainFrame.<event_handler>
-        try:
-            self.main_dl_thread.stop()
-        except (SystemExit):
-            self.download_finished(['success', '你停止了下载。'])
+        self.update_pd_result_text('尝试终止下载。')
+        if(self.main_dl_thread.stop()):
+            self.cancel_download_photo.Disable()
+        else:
+            self.update_pd_result_text('尝试终止下载失败，仍在下载中。')
+            
 
     '''
     照片下载器结束
+    '''
+    '''
+    dg- doc_generator
+    文书生成器用
     '''
 
     def choose_dg_xlsx_btn(self, event):  # wxGlade: MainFrame.<event_handler>
@@ -384,6 +391,13 @@ class MainFrame(wx.Frame):
     def choose_dg_preview_btn(self, event):  # wxGlade: MainFrame.<event_handler>
         print("Event handler 'choose_dg_preview_btn' not implemented!")
         event.Skip()
+    
+    def update_dg_resulttext(self, msg):
+        original_msg = self.doc_gen_result_text_area.GetValue()
+        new_msg = msg + u"\n" + '*' * 15 +'\n' + original_msg + u'\n'
+        self.doc_gen_result_text_area.SetValue(new_msg)
+
+    #页面转换时变更Frame大小
     def page_changing(self, event):  # wxGlade: MainFrame.<event_handler>
         if (event.GetSelection() == 1):
             self.SetSize((640, 539))
@@ -402,7 +416,7 @@ class AICToolbox(wx.App):
         设定结果窗口启动内容
         '''
         self.frame.save_to_path_text_area.SetValue(cwd)
-        self.frame.set_ph_dl_resulttext_keep_original(u'成功启动\n请选择监管所；\n默认下载到本程序所在的文件夹。')
+        self.frame.update_pd_result_text(u'成功启动\n请选择监管所；\n默认下载到本程序所在的文件夹。')
         #照片下载器用结束
         '''
         以下为文书生成器用：
