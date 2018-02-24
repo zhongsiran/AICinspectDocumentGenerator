@@ -11,6 +11,26 @@ from docx.shared import Mm, Inches, Pt   #图像 for height and width you have t
 from openpyxl import Workbook  #读取XLSX文件用
 from openpyxl import load_workbook  #读取XLSX文件用
 from openpyxl.utils import get_column_letter #读取XLSX文件用
+import threading
+from wx.lib.pubsub import pub
+import wx
+
+threadlock = threading.Lock()
+
+class doc_generator_main_thread(threading.Thread):
+    """docstring for doc_generator_main_thread"""
+    def __init__(self, original_path, target_path, workbook_path, ins_tpl_path, img_tpl_path):
+        super(doc_generator_main_thread, self).__init__()
+        self.setDaemon(True)
+        self.running = True
+        self.doc_generator_main = doc_generator(original_path, target_path, workbook_path, ins_tpl_path, img_tpl_path)
+
+    def run(self):
+        self.doc_generator_main.process_all_folders()
+        self.doc_generator_main.print_result()
+        self.doc_generator_main.save_result()
+
+
 
 class doc_generator: #固定的企业信息，从内部查询
     def __init__(self, original_path, target_path, workbook_path, ins_tpl_path, img_tpl_path):
@@ -49,12 +69,12 @@ class doc_generator: #固定的企业信息，从内部查询
             if('lib' not in singledir):
                 if(self.corp_folder_match(singledir)): #先从内置企业数据库中找、再从核查表中取得目标企业核查信息
                     self.original_current_path = singledir + '\\'
-                    print('正在处理：' + self.corpname)
-                    print('.'*12)
+                    #post_progess('.'*12)
+                    #post_progess('正在处理：' + self.corpname)
 
                     try:
                         os.mkdir(self.target_root_dir + '\\' + self.corpname)
-                    except FileExistsError as e:
+                    except FileExistsError:
                         pass
                     finally:
                         self.target_current_path = self.target_root_dir + '\\' + self.corpname
@@ -62,12 +82,10 @@ class doc_generator: #固定的企业信息，从内部查询
                     try:
                         self.generate_img_doc()
                         self.generate_inspect_record()
-                        print('成功生成文书！')
-                        print('*************')
-                        print(' ')
+                        post_progess('成功生成文书！')
                         self.successdir.append(singledir)
-                    except Exception as e:
-                        print('生成过程中出错:' + e)
+                    except Exception:
+                        post_progess('生成过程中出错')
                         self.faildir.append(singledir)
                 elif('lib' not in singledir):
                     self.faildir.append(singledir)            
@@ -77,8 +95,9 @@ class doc_generator: #固定的企业信息，从内部查询
     def corp_folder_match(self,folder_path):        
         self.corpname = re.sub(r'.*-',"",folder_path) ##删除剩下企业名称
         self.corpname = re.sub(r'.*\\',"",self.corpname) ##删除剩下企业名称
-        print('尝试匹配文件夹"' + self.corpname + '"')
-        print('......')
+        #post_progess('......')
+        post_progess('尝试匹配文件夹"' + self.corpname + '"')
+
         #以下根据企业名称查询信息
         if(self.get_corp_inspect_record()): #尝试从核查表读取
             return True
@@ -92,18 +111,21 @@ class doc_generator: #固定的企业信息，从内部查询
             #     self.date = chntoday.chntoday 
             #     return True
             # except Exception as e:
-            #     print(e)
-            print("核查记录表无此企业，跳过此企业")
-            print('****************************************')
-            print(" ")
+            #     post_progess(e)
+            #post_progess("核查记录表无此企业，跳过此企业")
+            #post_progess('****************************************')
+            #post_progess(" ")
             return False
 
     def load_ins_workbook(self, workbook_path):
         try:                    #尝试读取wbpath
             wb = load_workbook(filename=workbook_path)  
             self.ws = wb[wb.sheetnames[0]] #打开全局性的纪录表
-        except (Exception) as e:
-            print(e)
+        except FileNotFoundError:
+            post_progess('指定了不存在的核查表文件')
+            postfinished('无法打开核查表，请检查是否选择错误')
+            raise FileNotFoundError
+
             # print('读取企业信息及核查记录表.xlsx的信息失败，请检查文件。')
             # os.system('pause')
             # exit(0)
@@ -145,7 +167,7 @@ class doc_generator: #固定的企业信息，从内部查询
                     found = False #再次赋值作为提示
 
             if found == False:
-                print('在记录表中没有找到'+ self.corpname +'的核查记录')
+                #post_progess('在记录表中没有找到'+ self.corpname +'的核查记录')
                 return False #后接corp_folder_match
             else:
                 return True #后接corp_folder_match
@@ -168,10 +190,14 @@ class doc_generator: #固定的企业信息，从内部查询
                         'regnum' : self.regnum,
                         'corpname' : self.corpname
                     }
-                    tpl.render(context) #执行替换
-                    tpl.save(ImgDocPath) #保存文件
-                except Exception as e:
-                    print('174' +  e)
+                    try:
+                        tpl.render(context) #执行替换
+                        tpl.save(ImgDocPath) #保存文件
+                    except UnrecognizedImageError:
+                        content = file + '不是有效的图片文件，无法生成证据提取单'
+                        post_progess(content)
+                except Exception:
+                    self.faildir.append('处理' + ImgDocPath + '时出错')
             else:
                 pass
 
@@ -210,28 +236,29 @@ class doc_generator: #固定的企业信息，从内部查询
             print('210' +  e)
             
     def print_result(self): #打印结果
-        print('####'*15)
-        print('''
-广州市花都区市场监管局商事主体实地查无文书生成程序 ver.20180129-01
+        post_progess('####'*15)
+        post_progess('''
+核查文书生成器处理结果
 制作单位：狮岭监管所
 联系人：钟思燃
 联系电话：661668
 --------处理结果---------------------''')
         if(len(self.successdir) > 0):
-            print("成功在下列文件夹生成文书：")
+            post_progess("成功在下列文件夹生成文书：")
             for item in range(len(self.successdir)):
-                print(str(item + 1) + ': ' + self.successdir[item])
-                print('')
-        print('更多详情请看“处理结果.txt文件”')
+                post_progess(str(item + 1) + ': ' + self.successdir[item])
+                post_progess('')
+        post_progess('更多详情请看“处理结果.txt文件”')
 ##        if(len(self.faildir) > 0 ):
 ##            print("由于在核查记录表或企业信息库中未匹配到企业字号，下列文件夹未成功处理：")
 ##            for item in range(len(self.faildir)):
 ##                print(str(item +1 ) + ': ' + self.faildir[item])
-        os.system('pause')
+        postfinished('处理完毕')
+
     def save_result(self):
-        result_file = open(self.original_root_dir + '//' + '处理结果.txt','w+')
+        result_file = open(self.target_root_dir + '\\' + '处理结果.txt','w+')
         result_file.write('''
-广州市花都区市场监管局商事主体实地查无文书生成程序 ver.20180129-01
+核查文书生成器处理结果
 制作单位：狮岭监管所
 联系人：钟思燃
 联系电话：661668
@@ -243,7 +270,13 @@ class doc_generator: #固定的企业信息，从内部查询
                 result_file.write(str(item + 1) + ': ' + self.successdir[item] + '\n')
                 result_file.write('-----------------------------------------------\n')
         if(len(self.faildir) > 0 ):
-            result_file.write("由于在核查记录表或企业信息库中未匹配到企业字号，下列文件夹未成功处理：\n")
+            result_file.write("由于在核查记录表或企业信息库中未匹配到企业字号等原因，下列文件夹或文件未成功处理：\n")
             for item in range(len(self.faildir)):
                 result_file.write(str(item +1 ) + ': ' + self.faildir[item] + '\n')
+
+def post_progess(msg_to_post):
+    pub.sendMessage("update_dg", msg = msg_to_post)
+
+def postfinished(msg_to_post):
+    pub.sendMessage("dg_finished", result = msg_to_post)    
 
