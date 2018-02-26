@@ -245,15 +245,3 @@ class photolibrary:
         Sent msg to GUI
         '''
         pub.sendMessage("update", msg = msg_to_post)
-
-        
-# if __name__ == '__main__':
-#     photolib = photolibrary()
-#     photolib.divisionselector()
-#     photolib.getlinksdict()
-#     photolib.downloadpic()
-
-
-
-
-
