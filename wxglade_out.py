@@ -136,9 +136,6 @@ class MainFrame(wx.Frame):
     def __set_properties(self):
         # begin wxGlade: MainFrame.__set_properties
         self.SetTitle(_(u"\u5e02\u573a\u76d1\u7ba1\u5de5\u5177\u7bb1"))
-        _icon = wx.NullIcon
-        _icon.CopyFromBitmap(wx.Bitmap("C:\\py\\aicbadge.ico", wx.BITMAP_TYPE_ANY))
-        self.SetIcon(_icon)
         self.frame_statusbar.SetStatusWidths([-1])
 
         # statusbar fields
@@ -222,14 +219,12 @@ class MainFrame(wx.Frame):
         sizer_11 = wx.BoxSizer(wx.HORIZONTAL)
         grid_sizer_4.Add((20, 25), 0, 0, 0)
         sizer_11.Add((80, 20), 0, 0, 0)
-        bitmap_5 = wx.StaticBitmap(self.function_index_page, wx.ID_ANY,
-                                   wx.Bitmap("Y:\\Downloads\\31469cae9bafa58e542ded0fdfc74004\\PIC\\AICBADGE copy.jpg",
-                                             wx.BITMAP_TYPE_ANY))
+        bitmap_aic = PyEmbeddedImage(icon_embedded.b64_aic).GetBitmap()
+        bitmap_qua = PyEmbeddedImage(icon_embedded.b64_qua).GetBitmap()
+        bitmap_5 = wx.StaticBitmap(self.function_index_page, wx.ID_ANY,bitmap_aic)
         bitmap_5.SetMinSize((60, 60))
         sizer_11.Add(bitmap_5, 0, 0, 0)
-        bitmap_8 = wx.StaticBitmap(self.function_index_page, wx.ID_ANY,
-                                   wx.Bitmap("Y:\\Downloads\\31469cae9bafa58e542ded0fdfc74004\\PIC\\QUABADGE copy.jpg",
-                                             wx.BITMAP_TYPE_ANY))
+        bitmap_8 = wx.StaticBitmap(self.function_index_page, wx.ID_ANY,bitmap_qua)
         sizer_11.Add(bitmap_8, 0, 0, 0)
         sizer_11.Add((80, 20), 0, 0, 0)
         func_intro_label = wx.StaticText(self.function_index_page, wx.ID_ANY, _(
@@ -250,14 +245,10 @@ class MainFrame(wx.Frame):
         grid_sizer_4.Add(self.fucn_intr_ph_dl_text_copy_copy, 0, 0, 0)
         grid_sizer_4.Add(self.func_into_doc_gen_btn_copy, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
         self.function_index_page.SetSizer(grid_sizer_4)
-        bitmap_3 = wx.StaticBitmap(self.photo_download_page, wx.ID_ANY,
-                                   wx.Bitmap("Y:\\Downloads\\31469cae9bafa58e542ded0fdfc74004\\PIC\\AICBADGE copy.jpg",
-                                             wx.BITMAP_TYPE_ANY))
+        bitmap_3 = wx.StaticBitmap(self.photo_download_page, wx.ID_ANY,bitmap_aic)
         bitmap_3.SetMinSize((60, 60))
         photo_download_icons.Add(bitmap_3, 0, 0, 0)
-        bitmap_2 = wx.StaticBitmap(self.photo_download_page, wx.ID_ANY,
-                                   wx.Bitmap("Y:\\Downloads\\31469cae9bafa58e542ded0fdfc74004\\PIC\\QUABADGE copy.jpg",
-                                             wx.BITMAP_TYPE_ANY))
+        bitmap_2 = wx.StaticBitmap(self.photo_download_page, wx.ID_ANY,bitmap_qua)
         photo_download_icons.Add(bitmap_2, 0, 0, 0)
         photo_download_left_side.Add(photo_download_icons, 1, wx.EXPAND, 0)
         photo_download_left_side.Add((120, 30), 0, 0, 0)
@@ -298,14 +289,10 @@ class MainFrame(wx.Frame):
         photo_download_right_side.Add(self.cancel_download_photo, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
         photo_download_root_sizer.Add(photo_download_right_side, 1, wx.EXPAND, 0)
         self.photo_download_page.SetSizer(photo_download_root_sizer)
-        bitmap_6 = wx.StaticBitmap(self.doc_gen_page, wx.ID_ANY,
-                                   wx.Bitmap("Y:\\Downloads\\31469cae9bafa58e542ded0fdfc74004\\PIC\\AICBADGE copy.jpg",
-                                             wx.BITMAP_TYPE_ANY))
+        bitmap_6 = wx.StaticBitmap(self.doc_gen_page, wx.ID_ANY,bitmap_aic)
         bitmap_6.SetMinSize((60, 60))
         grid_sizer_1.Add(bitmap_6, 0, wx.ALIGN_RIGHT, 0)
-        bitmap_7 = wx.StaticBitmap(self.doc_gen_page, wx.ID_ANY,
-                                   wx.Bitmap("Y:\\Downloads\\31469cae9bafa58e542ded0fdfc74004\\PIC\\QUABADGE copy.jpg",
-                                             wx.BITMAP_TYPE_ANY))
+        bitmap_7 = wx.StaticBitmap(self.doc_gen_page, wx.ID_ANY,bitmap_qua)
         grid_sizer_1.Add(bitmap_7, 0, 0, 0)
         doc_gen_left_side.Add(grid_sizer_1, 1, wx.EXPAND, 0)
         sizer_14.Add((20, 10), 0, 0, 0)
@@ -586,7 +573,7 @@ class MainFrame(wx.Frame):
     # 页面转换时变更Frame大小
     def page_changing(self, event):  # wxGlade: MainFrame.<event_handler>
         if (event.GetSelection() == 1):
-            self.SetSize((640, 539))
+            self.SetSize((640, 539 + 100))
         elif (event.GetSelection() == 2):
             self.SetSize((730, 750))
         elif (event.GetSelection() == 0):
