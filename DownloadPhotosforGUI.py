@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-# done
+# ver1.2：增加分所下载功能
 
 import requests
 import os
@@ -22,9 +22,10 @@ threadLock = threading.Lock()
 
 class photo_dl_thread(Thread):
     """docstring for photo_dl_thread"""
-    def __init__(self, division_index, target_dir):
+    def __init__(self, division_index, target_dir, division_password):
         Thread.__init__(self)
         self.division_index = division_index
+        self.division_password = division_password
         self.target_dir = target_dir
         self.setDaemon(True)
         self.running = True
@@ -41,7 +42,7 @@ class photo_dl_thread(Thread):
         pl = photolibrary(self.target_dir)
         pl.divisionselector(self.division_index)
         try:
-            get_dict_result = pl.getlinksdict()
+            get_dict_result = pl.getlinksdict(self.division_password)
             if (get_dict_result[0] == '成功连接云服务器，下载照片中；\n'):
                 wx.CallAfter(self.postprogress, get_dict_result[0])
                 all_keys = list(get_dict_result[2])
@@ -55,19 +56,28 @@ class photo_dl_thread(Thread):
                     print(e)
                 t1 = random.randrange(0, 101, 2)
                 t2 = random.randrange(0, 101, 2)
-                keys_first_part = all_keys[:math.floor(all_keys_num/2)]
+                if (all_keys_num > 4):
+                    keys_first_part = all_keys[:math.floor(all_keys_num/2)]
+                    keys_last_part = all_keys[math.floor(all_keys_num/2)-1:]
+                else:
+                    keys_first_part = all_keys
+                    keys_last_part = all_keys
                 self.t1 = photo_download_sub_thread(t1, self.division_index, self.target_dir ,keys_first_part, the_dict)
-                keys_last_part = all_keys[math.floor(all_keys_num/2)-1:]
                 self.t2 = photo_download_sub_thread(t2, self.division_index, self.target_dir ,keys_last_part, the_dict)
                 if(self.t1.isAlive()):
-                    self.t1.join()    
+                    self.t1.join()
                 if(self.t2.isAlive()):            
                     self.t2.join()
-                content = '已有' + str(exist_count) + '张照片，新增' +  str(new_count) + '张照片'
+                content = '新增' +  str(new_count) + '张照片'
                 wx.CallAfter(self.postfinished, ['success', content]) 
-            else:
+            elif (get_dict_result[0] == 'newwork_error'):
                 wx.CallAfter(self.postfinished, ['fail', u'下载失败，请检查网络后重试']) 
-        except:
+            elif (get_dict_result[0] == 'div_pwd_error'):
+                wx.CallAfter(self.postfinished, ['fail', u'下载失败，监管所密码有误，请检查或联系管理员'])
+            else:
+                wx.CallAfter(self.postfinished, ['fail', u'下载失败，出现未知错误，请稍后重试或联系管理员'])                 
+        except Exception as e:
+            print (e)
             self.stop('无法连接服务器，请检查外网（互联网）连接')
 
     def stop(self, msg='正在取消下载'):
@@ -187,26 +197,30 @@ class photolibrary:
             self.oldname = True
             return True
 
-    def getlinksdict(self):
-        try:
-            pagepy=requests.post("https://shilingaic.applinzi.com/public/listfilepy.php",data={'secretkey':'ZhongSiRan1990'})
-        except:
-            result.append('连接网络失败，请检查。')
-            self.running == False
+    def getlinksdict(self, division_password):
+        pagepy=requests.post("https://shilingaic.applinzi.com/mylib/PyToolboxControllers/PhotoDownloaderListFile.php",data={'secretkey':'ZhongSiRan1990', 'div_pwd' : division_password, 'div' : self.division})
         result = []
-        if(pagepy.status_code == 200):
-            result.append('成功连接云服务器，下载照片中；\n')
+        web_return_text = pagepy.text
+        if (web_return_text.find('pwd_error') == 0):
+            print(web_return_text)
+            print(web_return_text.find('pwd_error'))
+            result.append('div_pwd_error')
         else:
-            result.append('连接网络失败，请检查。http错误码：' + pagepy.status_code +'\n')
+            if (pagepy.status_code == 200):
+                print(web_return_text)
+                print(web_return_text.find('pwd_error'))
+                result.append('成功连接云服务器，下载照片中；\n')
+                length = len(pagepy.text) - 1
+                pagetext = pagepy.text[:length]
+                pagetext="{" + pagetext + "}"
+                self.file_dict = ast.literal_eval(pagetext)
+                result.append(len(self.file_dict.keys()))
+                result.append(self.file_dict.keys())
+                result.append(self.file_dict)
+            else:
+                result.append('network_error')
         #now = date.today()
         #today = "%d-%d-%d" %(now.year,now.month,now.day)
-        length = len(pagepy.text) - 1
-        pagetext = pagepy.text[:length]
-        pagetext="{" + pagetext + "}"
-        self.file_dict = ast.literal_eval(pagetext)
-        result.append(len(self.file_dict.keys()))
-        result.append(self.file_dict.keys())
-        result.append(self.file_dict)
         return result # 连接情况；字典长度；字典健列表；字典本身
         
     def divisionselector(self,division_index):
@@ -231,15 +245,3 @@ class photolibrary:
         Sent msg to GUI
         '''
         pub.sendMessage("update", msg = msg_to_post)
-
-        
-# if __name__ == '__main__':
-#     photolib = photolibrary()
-#     photolib.divisionselector()
-#     photolib.getlinksdict()
-#     photolib.downloadpic()
-
-
-
-
-
