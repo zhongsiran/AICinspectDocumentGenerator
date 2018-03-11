@@ -79,12 +79,11 @@ class MainFrame(wx.Frame):
         pub.subscribe(self.update_dg_resulttext, "update_dg")
         pub.subscribe(self.doc_generator_finished, "dg_finished")
 
-
     def __set_properties(self):
         # begin wxGlade: MainFrame.__set_properties
         self.SetTitle(_(u"\u5e02\u573a\u76d1\u7ba1\u5de5\u5177\u7bb1"))
         self.frame_statusbar.SetStatusWidths([-1])
-        
+
         # statusbar fields
         frame_statusbar_fields = [_("frame_statusbar")]
         for i in range(len(frame_statusbar_fields)):
@@ -299,34 +298,34 @@ class MainFrame(wx.Frame):
         self.update_pd_result_text('开始接连云服务器\n连接和下载过程中请停止其他操作')
 
         division_index = self.rbox_division.GetSelection()
-        target_dir = re.sub(r'\s' , '', self.save_to_path_text_area.GetValue())
+        target_dir = re.sub(r'\s', '', self.save_to_path_text_area.GetValue())
         try:
             os.mkdir(target_dir)
         except(FileExistsError):
             pass
         self.main_dl_thread = dp.photo_dl_thread(division_index, target_dir)
-        
+
     def download_finished(self, result):
         if(isinstance(result, list)):
             if(result[0] == 'success'):
                 self.choose_download_path.Enable()
                 self.begin_download_photo.SetLabel(u'开始下载')
                 self.begin_download_photo.Enable()
-                self.update_pd_result_text('下载结果：\n' + result[1]) #打印下载结果
+                self.update_pd_result_text('下载结果：\n' + result[1])  # 打印下载结果
                 self.cancel_download_photo.Disable()
                 self.choose_download_path.SetLabel(u"\u66f4\u6539\u4e0b\u8f7d\u8def\u5f84\n")
             else:
                 self.choose_download_path.Enable()
                 self.begin_download_photo.SetLabel(u'开始下载')
                 self.begin_download_photo.Enable()
-                self.update_pd_result_text(result[1]) #打印错误信息
+                self.update_pd_result_text(result[1])  # 打印错误信息
                 self.cancel_download_photo.Disable()
                 self.choose_download_path.SetLabel(u"\u66f4\u6539\u4e0b\u8f7d\u8def\u5f84\n")
 
     def choose_download_path_btn(self, event):  # wxGlade: MainFrame.<event_handler>
-        dlg = wx.DirDialog(self,u"选择文件夹",style=wx.DD_DEFAULT_STYLE)
-        if dlg.ShowModal() == wx.ID_OK:  
-            self.save_to_path_text_area.SetValue(dlg.GetPath()) #文件夹路径  
+        dlg = wx.DirDialog(self, u"选择文件夹", style=wx.DD_DEFAULT_STYLE)
+        if dlg.ShowModal() == wx.ID_OK:
+            self.save_to_path_text_area.SetValue(dlg.GetPath())  # 文件夹路径
         dlg.Destroy()
 
     def rbox_div_select(self, event):  # wxGlade: MainFrame.<event_handler>
@@ -334,7 +333,7 @@ class MainFrame(wx.Frame):
 
     def update_pd_result_text(self, msg):
         original_msg = self.photo_download_result_text.GetValue()
-        new_msg = msg + u"\n" + '*' * 15 +'\n' + original_msg + u'\n'
+        new_msg = msg + u"\n" + '*' * 15 + '\n' + original_msg + u'\n'
         self.photo_download_result_text.SetValue(new_msg)
 
     def cancel_download_btn(self, event):  # wxGlade: MainFrame.<event_handler>
@@ -343,25 +342,22 @@ class MainFrame(wx.Frame):
             self.cancel_download_photo.Disable()
         else:
             self.update_pd_result_text('尝试终止下载失败，仍在下载中。')
-            
 
     '''
     照片下载器结束
-    '''
-    '''
     dg- doc_generator
     文书生成器用
     '''
 
     def choose_dg_xlsx_btn(self, event):  # wxGlade: MainFrame.<event_handler>
-        dlg = wx.FileDialog(self, u"选择核查表", wildcard="xlsx files (*.xlsx)|*.xlsx",style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
+        dlg = wx.FileDialog(self, u"选择核查表", wildcard="xlsx files (*.xlsx)|*.xlsx", style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
         if dlg.ShowModal() == wx.ID_OK:  
             self.doc_gen_xlsx_path.SetValue(dlg.GetPath()) #核查表路径
             self.label_xlsx.SetBackgroundColour(wx.Colour(124, 252, 0))
             self.Refresh()
         dlg.Destroy()
     def choose_dg_ins_tpl_btn(self, event):  # wxGlade: MainFrame.<event_handler>
-        dlg = wx.FileDialog(self, u"选择现场笔录模版", wildcard="docx files (*.docx)|*.docx",style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
+        dlg = wx.FileDialog(self, u"选择现场笔录模版", wildcard="docx files (*.docx)|*.docx", style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
         if dlg.ShowModal() == wx.ID_OK:  
             self.doc_gen_ins_tpl_path.SetValue(dlg.GetPath()) #笔录模版路径
             self.label_ins_tpl.SetBackgroundColour(wx.Colour(124, 252, 0))
@@ -455,6 +451,7 @@ class MainFrame(wx.Frame):
             self.SetSize((730, 750))
 # end of class MainFrame
 
+
 class AICToolbox(wx.App):
     def OnInit(self):
         self.frame = MainFrame(None, wx.ID_ANY, "")
@@ -498,6 +495,7 @@ class AICToolbox(wx.App):
         return True
 
 # end of class AICToolbox
+
 
 if __name__ == "__main__":
     gettext.install("AICToolbox") # replace with the appropriate catalog name
