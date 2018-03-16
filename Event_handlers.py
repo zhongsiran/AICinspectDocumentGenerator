@@ -1,4 +1,4 @@
-import wxglade_out
+import AICToolBox
 import DocGeneratorGUI
 import DownloadPhotosforGUI
 
@@ -6,7 +6,7 @@ import DownloadPhotosforGUI
 '''
 对GUI界面第一面功能选择按键的事件处理器
 '''
-class FuncPageEventHandlers(wxglade_out.MainFrame):
+class FuncPageEventHandlers(AICToolBox.MainFrame):
 
     def __init__(self, mainframe):
         #super(EventHandlers, self).__init__()

@@ -39,7 +39,7 @@ class photo_dl_thread(Thread):
         global new_count
         new_count = 0
         exist_count = 0
-        pl = photolibrary(self.target_dir)
+        pl = PhotoLibrary(self.target_dir)
         pl.divisionselector(self.division_index)
         try:
             get_dict_result = pl.getlinksdict(self.division_password)
@@ -62,13 +62,13 @@ class photo_dl_thread(Thread):
                 else:
                     keys_first_part = all_keys
                     keys_last_part = all_keys
-                self.t1 = photo_download_sub_thread(t1, self.division_index, self.target_dir ,keys_first_part, the_dict)
-                self.t2 = photo_download_sub_thread(t2, self.division_index, self.target_dir ,keys_last_part, the_dict)
+                self.t1 = PhotoDownloadSubThread(t1, self.division_index, self.target_dir, keys_first_part, the_dict)
+                self.t2 = PhotoDownloadSubThread(t2, self.division_index, self.target_dir, keys_last_part, the_dict)
                 if(self.t1.isAlive()):
                     self.t1.join()
                 if(self.t2.isAlive()):            
                     self.t2.join()
-                content = '新增' +  str(new_count) + '张照片'
+                content = '新增' + str(new_count) + '张照片'
                 wx.CallAfter(self.postfinished, ['success', content]) 
             elif (get_dict_result[0] == 'newwork_error'):
                 wx.CallAfter(self.postfinished, ['fail', u'下载失败，请检查网络后重试']) 
@@ -102,7 +102,9 @@ class photo_dl_thread(Thread):
         pub.sendMessage("dl_finished", result = msg_to_post)
 
 ########################################################################################
-class photo_download_sub_thread (Thread):
+
+
+class PhotoDownloadSubThread (Thread):
     """docstring for ph"""
     def __init__(self, name, division_index, target_dir, dict_keys, the_dict):
         Thread.__init__(self)
@@ -113,35 +115,38 @@ class photo_download_sub_thread (Thread):
         self.name = name
         self.running = True
         self.start()
+
     def run(self):
         global exist_count
         global new_count
         result_count = [0, 0]
-        if (self.running == True):
-            self.pl_object = photolibrary(self.target_dir)
+        if self.running == True:
+            self.pl_object = PhotoLibrary(self.target_dir)
             self.pl_object.divisionselector(self.division_index)
-            result_count = self.pl_object.downloadpic(self.name, self.keys, self.file_dict)
+            result_count = self.pl_object.download_picture(self.name, self.keys, self.file_dict)
         exist_count += result_count[0]
         new_count += result_count[1]
 #########################################################################
-class photolibrary:
+
+
+class PhotoLibrary:
     def __init__(self, target_dir):
-        if(target_dir == ''):
+        if target_dir == '':
             self.target_dir = os.getcwd()
         else:
             self.target_dir = target_dir
 
-        self.prefolder = ''
+        self.pre_folder = ''
         self.file_dict = []
         self.running = True
         
-    def downloadpic(self, name, keys, the_dict):
+    def download_picture(self, name, keys, the_dict):
         exist_count = 0
         new_count = 0
         for filename in keys:
             if (self.running):
                 sourceurl = the_dict.get(filename)
-                if(self.divisionfilter(filename)):
+                if(self.division_filter(filename)):
                     corpfolder = re.sub(r'-?' + self.division + '?-\d+(_\d+-\d+-\d+)?.jpg',"",filename) #删除剩下企业名称
                     if (self.oldname):
                         corpfolder = re.sub(r'-\d+.jpg',"",filename)
@@ -186,7 +191,7 @@ class photolibrary:
         result_count = [exist_count, new_count]
         return result_count
 
-    def divisionfilter(self, filename):
+    def division_filter(self, filename):
         patterndiv = re.compile(r'-' + self.division + '-\d+(_\d+-\d+-\d+)?.jpg',re.A)
         patterngen = re.compile(r'-\w{2}-\d+.jpg',re.A) #旧有无分所和日期的文件名 ex. 字号-01.JPG
         if re.findall(patterndiv, filename):
@@ -204,18 +209,18 @@ class photolibrary:
         result = []
         web_return_text = pagepy.text
         if web_return_text.find('pwd_error') == 0:
-            print(web_return_text)
-            print(web_return_text.find('pwd_error'))
+            #print(web_return_text)
+            #print(web_return_text.find('pwd_error'))
             result.append('div_pwd_error')
         else:
             if pagepy.status_code == 200:
-                print(web_return_text)
-                print(web_return_text.find('pwd_error'))
+                #print(web_return_text)
+                #print(web_return_text.find('pwd_error'))
                 result.append('成功连接云服务器，下载照片中；\n')
                 length = len(pagepy.text) - 1
-                pagetext = pagepy.text[:length]
-                pagetext="{" + pagetext + "}"
-                self.file_dict = ast.literal_eval(pagetext)
+                page_text = pagepy.text[:length]
+                page_text="{" + page_text + "}"
+                self.file_dict = ast.literal_eval(page_text)
                 result.append(len(self.file_dict.keys()))
                 result.append(self.file_dict.keys())
                 result.append(self.file_dict)
