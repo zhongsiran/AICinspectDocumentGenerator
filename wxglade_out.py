@@ -414,19 +414,14 @@ class MainFrame(wx.Frame):
 
         division_index = self.rbox_division.GetSelection()
         target_dir = re.sub(r'\s', '', self.save_to_path_text_area.GetValue())
-<<<<<<< HEAD
-=======
         division_password = self.photo_download_password_text.GetValue()
->>>>>>> 783db0c1749ab951d3a53a5851b7a02814043153
         try:
             os.mkdir(target_dir)
         except(FileExistsError):
             pass
-<<<<<<< HEAD
-        self.main_dl_thread = dp.photo_dl_thread(division_index, target_dir)
-=======
+
         self.main_dl_thread = dp.photo_dl_thread(division_index, target_dir, division_password)
->>>>>>> 783db0c1749ab951d3a53a5851b7a02814043153
+
 
     def download_finished(self, result):
         if (isinstance(result, list)):
@@ -473,31 +468,22 @@ class MainFrame(wx.Frame):
     '''
 
     def choose_dg_xlsx_btn(self, event):  # wxGlade: MainFrame.<event_handler>
-<<<<<<< HEAD
-        dlg = wx.FileDialog(self, u"选择核查表", wildcard="xlsx files (*.xlsx)|*.xlsx", style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
-        if dlg.ShowModal() == wx.ID_OK:  
-            self.doc_gen_xlsx_path.SetValue(dlg.GetPath()) #核查表路径
-=======
+
         dlg = wx.FileDialog(self, u"选择核查表", wildcard="xlsx files (*.xlsx)|*.xlsx",
                             style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
         if dlg.ShowModal() == wx.ID_OK:
             self.doc_gen_xlsx_path.SetValue(dlg.GetPath())  # 核查表路径
->>>>>>> 783db0c1749ab951d3a53a5851b7a02814043153
             self.label_xlsx.SetBackgroundColour(wx.Colour(124, 252, 0))
             self.Refresh()
         dlg.Destroy()
 
     def choose_dg_ins_tpl_btn(self, event):  # wxGlade: MainFrame.<event_handler>
-<<<<<<< HEAD
-        dlg = wx.FileDialog(self, u"选择现场笔录模版", wildcard="docx files (*.docx)|*.docx", style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
-        if dlg.ShowModal() == wx.ID_OK:  
-            self.doc_gen_ins_tpl_path.SetValue(dlg.GetPath()) #笔录模版路径
-=======
+
         dlg = wx.FileDialog(self, u"选择现场笔录模版", wildcard="docx files (*.docx)|*.docx",
                             style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
         if dlg.ShowModal() == wx.ID_OK:
             self.doc_gen_ins_tpl_path.SetValue(dlg.GetPath())  # 笔录模版路径
->>>>>>> 783db0c1749ab951d3a53a5851b7a02814043153
+
             self.label_ins_tpl.SetBackgroundColour(wx.Colour(124, 252, 0))
             self.Refresh()
         dlg.Destroy()
