@@ -116,6 +116,7 @@ class photo_download_sub_thread (Thread):
     def run(self):
         global exist_count
         global new_count
+        result_count = [0, 0]
         if (self.running == True):
             self.pl_object = photolibrary(self.target_dir)
             self.pl_object.divisionselector(self.division_index)
@@ -131,6 +132,7 @@ class photolibrary:
             self.target_dir = target_dir
 
         self.prefolder = ''
+        self.file_dict = []
         self.running = True
         
     def downloadpic(self, name, keys, the_dict):
@@ -162,10 +164,10 @@ class photolibrary:
                         #print('文件已经存在')
                         #print(local_img_file + " already exists")
                         exist_count += 1
-                     #   threadLock.release()
+                    #   threadLock.release()
                     else:
                         LocalImg = open(local_img_file, 'wb')
-                      #  threadLock.release()
+                    #  threadLock.release()
                         try:
                             NetImg=requests.get(sourceurl)
                             LocalImg.write(NetImg.content)
@@ -174,7 +176,7 @@ class photolibrary:
                                 self.post_dl_thread_progress('新增文件：' + filename)
                             new_count += 1
                         except:
-                            self.running == False
+                            self.running = False
                             break
 
                     self.oldname = False
@@ -184,16 +186,16 @@ class photolibrary:
         result_count = [exist_count, new_count]
         return result_count
 
-    def divisionfilter(self,filename):
+    def divisionfilter(self, filename):
         patterndiv = re.compile(r'-' + self.division + '-\d+(_\d+-\d+-\d+)?.jpg',re.A)
         patterngen = re.compile(r'-\w{2}-\d+.jpg',re.A) #旧有无分所和日期的文件名 ex. 字号-01.JPG
-        if (re.findall(patterndiv,filename) != []):
+        if re.findall(patterndiv, filename):
             self.oldname = False
             return True
-        elif((re.findall(patterngen,filename) != []) and (self.division != 'SL')):
+        elif re.findall(patterngen, filename) and self.division != 'SL':
             self.oldname = False
             return False
-        elif((re.findall(patterngen,filename) == []) and (self.division == 'SL')):
+        elif (not re.findall(patterngen, filename)) and self.division == 'SL':
             self.oldname = True
             return True
 
@@ -201,12 +203,12 @@ class photolibrary:
         pagepy=requests.post("https://shilingaic.applinzi.com/mylib/PyToolboxControllers/PhotoDownloaderListFile.php",data={'secretkey':'ZhongSiRan1990', 'div_pwd' : division_password, 'div' : self.division})
         result = []
         web_return_text = pagepy.text
-        if (web_return_text.find('pwd_error') == 0):
+        if web_return_text.find('pwd_error') == 0:
             print(web_return_text)
             print(web_return_text.find('pwd_error'))
             result.append('div_pwd_error')
         else:
-            if (pagepy.status_code == 200):
+            if pagepy.status_code == 200:
                 print(web_return_text)
                 print(web_return_text.find('pwd_error'))
                 result.append('成功连接云服务器，下载照片中；\n')
