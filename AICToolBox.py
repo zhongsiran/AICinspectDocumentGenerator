@@ -61,6 +61,7 @@ class MainFrame(wx.Frame):
         self.save_to_path_text_area = wx.TextCtrl(self.photo_download_page, wx.ID_ANY, "",
                                                   style=wx.TE_LEFT | wx.TE_MULTILINE | wx.TE_WORDWRAP)
         self.photo_download_password_text = wx.TextCtrl(self.photo_download_page, wx.ID_ANY, "", style=wx.TE_PASSWORD)
+        self.photo_download_delimiter_text = wx.TextCtrl(self.photo_download_page, wx.ID_ANY, "", style=wx.TE_WORDWRAP)
         self.choose_download_path = wx.Button(self.photo_download_page, wx.ID_ANY,
                                               _(u"\u66f4\u6539\u4e0b\u8f7d\u8def\u5f84\n"), style=wx.BU_AUTODRAW)
         self.begin_download_photo = wx.Button(self.photo_download_page, wx.ID_ANY, _(u"\n\u5f00\u59cb\u4e0b\u8f7d\n"),
@@ -160,7 +161,8 @@ class MainFrame(wx.Frame):
         self.photo_download_result_text.SetMinSize((233, 120))
         self.save_to_path_text_area.SetMinSize((500, 70))
         self.save_to_path_text_area.SetFont(wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL, 0, ""))
-        self.photo_download_password_text.SetMinSize((220, 27))
+        self.photo_download_password_text.SetMinSize((80, 17))
+        self.photo_download_delimiter_text.SetMinSize((220, 17))
         self.choose_download_path.SetMinSize((120, 40))
         self.choose_download_path.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "楷体_GB2312"))
         self.begin_download_photo.SetMinSize((120, 40))
@@ -276,8 +278,13 @@ class MainFrame(wx.Frame):
         label_2 = wx.StaticText(self.photo_download_page, wx.ID_ANY, _(u"\u672c\u6240\u4e0b\u8f7d\u5bc6\u7801:"),
                                 style=wx.ALIGN_CENTER)
         label_2.SetFont(wx.Font(10, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "仿宋_GB2312"))
+        label_delimiter = wx.StaticText(self.photo_download_page, wx.ID_ANY, _(u"子文件夹:"),
+                                style=wx.ALIGN_CENTER)
+        label_delimiter.SetFont(wx.Font(10, wx.MODERN, wx.NORMAL, wx.NORMAL, 0, "仿宋_GB2312"))
         sizer_10.Add(label_2, 0, wx.ALIGN_CENTER | wx.ALL | wx.EXPAND, 0)
         sizer_10.Add(self.photo_download_password_text, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
+        sizer_10.Add(label_delimiter, 0, wx.ALIGN_CENTER | wx.ALL | wx.EXPAND, 0)
+        sizer_10.Add(self.photo_download_delimiter_text, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
         photo_download_right_side.Add(sizer_10, 1, wx.EXPAND, 0)
         photo_download_right_side.Add(self.choose_download_path, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
         static_line_2 = wx.StaticLine(self.photo_download_page, wx.ID_ANY)
@@ -415,17 +422,17 @@ class MainFrame(wx.Frame):
         division_index = self.rbox_division.GetSelection()
         target_dir = re.sub(r'\s', '', self.save_to_path_text_area.GetValue())
         division_password = self.photo_download_password_text.GetValue()
+        delimiter = self.photo_download_delimiter_text.GetValue()
         try:
             os.mkdir(target_dir)
         except(FileExistsError):
             pass
 
-        self.main_dl_thread = dp.photo_dl_thread(division_index, target_dir, division_password)
-
+        self.main_dl_thread = dp.photo_dl_thread(division_index, target_dir, division_password, delimiter)
 
     def download_finished(self, result):
-        if (isinstance(result, list)):
-            if (result[0] == 'success'):
+        if isinstance(result, list):
+            if result[0] == 'success':
                 self.choose_download_path.Enable()
                 self.begin_download_photo.SetLabel(u'开始下载')
                 self.begin_download_photo.Enable()

@@ -22,10 +22,11 @@ threadLock = threading.Lock()
 
 class photo_dl_thread(Thread):
     """docstring for photo_dl_thread"""
-    def __init__(self, division_index, target_dir, division_password):
+    def __init__(self, division_index, target_dir, division_password, delimiter):
         Thread.__init__(self)
         self.division_index = division_index
         self.division_password = division_password
+        self.delimiter = delimiter
         self.target_dir = target_dir
         self.setDaemon(True)
         self.running = True
@@ -42,7 +43,7 @@ class photo_dl_thread(Thread):
         pl = PhotoLibrary(self.target_dir)
         pl.divisionselector(self.division_index)
         try:
-            get_dict_result = pl.getlinksdict(self.division_password)
+            get_dict_result = pl.getlinksdict(self.division_password, self.delimiter)
             if (get_dict_result[0] == '成功连接云服务器，下载照片中；\n'):
                 wx.CallAfter(self.postprogress, get_dict_result[0])
                 all_keys = list(get_dict_result[2])
@@ -204,8 +205,9 @@ class PhotoLibrary:
             self.oldname = True
             return True
 
-    def getlinksdict(self, division_password):
-        pagepy=requests.post("https://shilingaic.applinzi.com/mylib/PyToolboxControllers/PhotoDownloaderListFile.php",data={'secretkey':'ZhongSiRan1990', 'div_pwd' : division_password, 'div' : self.division})
+    def getlinksdict(self, division_password, delimiter):
+        data = {'secretkey': 'ZhongSiRan1990', 'div_pwd': division_password, 'div': self.division, 'delimiter': delimiter}
+        pagepy=requests.post("https://shilingaic.applinzi.com/mylib/PyToolboxControllers/PhotoDownloaderListFile.php", data)
         result = []
         web_return_text = pagepy.text
         if web_return_text.find('pwd_error') == 0:
