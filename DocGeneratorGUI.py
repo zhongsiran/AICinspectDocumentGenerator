@@ -66,12 +66,9 @@ class doc_generator: #固定的企业信息，从内部查询
         
     def process_all_folders(self): #主处理函数
         for singledir,subdirs,files in os.walk(self.original_root_dir):
-            if('lib' not in singledir):
-                if(self.corp_folder_match(singledir)): #先从内置企业数据库中找、再从核查表中取得目标企业核查信息
+            if 'lib' not in singledir :
+                if self.corp_folder_match(singledir) : #先从内置企业数据库中找、再从核查表中取得目标企业核查信息
                     self.original_current_path = singledir + '\\'
-                    #post_progess('.'*12)
-                    #post_progess('正在处理：' + self.corpname)
-
                     try:
                         os.mkdir(self.target_root_dir + '\\' + self.corpname)
                     except FileExistsError:
@@ -87,15 +84,14 @@ class doc_generator: #固定的企业信息，从内部查询
                     except Exception:
                         post_progess('生成过程中出错')
                         self.faildir.append(singledir)
-                elif('lib' not in singledir):
+                elif 'lib' not in singledir:
                     self.faildir.append(singledir)            
-            elif('lib' not in singledir):
+            elif'lib' not in singledir:
                 self.faildir.append(singledir)            
 
     def corp_folder_match(self,folder_path):        
-        self.corpname = re.sub(r'.*-',"",folder_path) ##删除剩下企业名称
-        self.corpname = re.sub(r'.*\\',"",self.corpname) ##删除剩下企业名称
-        #post_progess('......')
+        self.corpname = re.sub(r'.*-', "", folder_path) ##删除剩下企业名称
+        self.corpname = re.sub(r'.*\\', "", self.corpname) ##删除剩下企业名称
         post_progess('尝试匹配文件夹"' + self.corpname + '"')
 
         #以下根据企业名称查询信息
@@ -106,9 +102,9 @@ class doc_generator: #固定的企业信息，从内部查询
             #     self.addr = corpinfo.allcorpinfo[self.corpname]['addr']
             #     if(corpinfo.phone[self.corpname]):
             #         self.phone = corpinfo.phone[self.corpname]
-            #     self.regnum = corpinfo.allcorpinfo[self.corpname]['regnum'] 
+            #     self.regnum = corpinfo.allcorpinfo[self.corpname]['regnum']
             #     self.repperson = corpinfo.allcorpinfo[self.corpname]['repperson']
-            #     self.date = chntoday.chntoday 
+            #     self.date = chntoday.chntoday
             #     return True
             # except Exception as e:
             #     post_progess(e)

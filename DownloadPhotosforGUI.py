@@ -148,7 +148,7 @@ class PhotoLibrary:
             if (self.running):
                 sourceurl = the_dict.get(filename)
                 if(self.division_filter(filename)):
-                    corpfolder = re.sub(r'-?' + self.division + '?-\d+(_\d+-\d+-\d+)?.jpg',"",filename) #删除剩下企业名称
+                    corpfolder = re.sub(r'-?' + self.division + '?-\d+(_\d+-\d+-\d+)?.jpg', "", filename) #删除剩下企业名称
                     if (self.oldname):
                         corpfolder = re.sub(r'-\d+.jpg',"",filename)
                     #corpfolder-字号得到
@@ -193,8 +193,8 @@ class PhotoLibrary:
         return result_count
 
     def division_filter(self, filename):
-        patterndiv = re.compile(r'-' + self.division + '-\d+(_\d+-\d+-\d+)?.jpg',re.A)
-        patterngen = re.compile(r'-\w{2}-\d+.jpg',re.A) #旧有无分所和日期的文件名 ex. 字号-01.JPG
+        patterndiv = re.compile(r'-' + self.division + '-\d+(_\d+-\d+-\d+)?.jpg', re.A)
+        patterngen = re.compile(r'-\w{2}-\d+.jpg', re.A) #旧有无分所和日期的文件名 ex. 字号-01.JPG
         if re.findall(patterndiv, filename):
             self.oldname = False
             return True
