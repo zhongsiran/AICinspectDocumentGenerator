@@ -546,7 +546,7 @@ class MainFrame(wx.Frame):
                 os.mkdir(target_path)
             except (FileExistsError):
                 pass
-            dg_mt = dg.doc_generator_main_thread(original_path, target_path, workbook_path, ins_tpl_path, img_tpl_path)
+            dg_mt = dg.DocGeneratorMainThread(original_path, target_path, workbook_path, ins_tpl_path, img_tpl_path)
             dg_mt.start()
 
     def cancel_dg_btn(self, event):  # wxGlade: MainFrame.<event_handler>
