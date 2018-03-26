@@ -89,28 +89,15 @@ class doc_generator: #固定的企业信息，从内部查询
             elif'lib' not in singledir:
                 self.faildir.append(singledir)            
 
-    def corp_folder_match(self,folder_path):        
+    def corp_folder_match(self, folder_path):
         self.corpname = re.sub(r'.*-', "", folder_path) ##删除剩下企业名称
         self.corpname = re.sub(r'.*\\', "", self.corpname) ##删除剩下企业名称
         post_progess('尝试匹配文件夹"' + self.corpname + '"')
 
         #以下根据企业名称查询信息
-        if(self.get_corp_inspect_record()): #尝试从核查表读取
+        if self.get_corp_inspect_record(): #尝试从核查表读取
             return True
         else:
-            # try: #先尝试搜索corpinfo模块
-            #     self.addr = corpinfo.allcorpinfo[self.corpname]['addr']
-            #     if(corpinfo.phone[self.corpname]):
-            #         self.phone = corpinfo.phone[self.corpname]
-            #     self.regnum = corpinfo.allcorpinfo[self.corpname]['regnum']
-            #     self.repperson = corpinfo.allcorpinfo[self.corpname]['repperson']
-            #     self.date = chntoday.chntoday
-            #     return True
-            # except Exception as e:
-            #     post_progess(e)
-            #post_progess("核查记录表无此企业，跳过此企业")
-            #post_progess('****************************************')
-            #post_progess(" ")
             return False
 
     def load_ins_workbook(self, workbook_path):
@@ -122,10 +109,6 @@ class doc_generator: #固定的企业信息，从内部查询
             postfinished('无法打开核查表，请检查是否选择错误')
             raise FileNotFoundError
 
-            # print('读取企业信息及核查记录表.xlsx的信息失败，请检查文件。')
-            # os.system('pause')
-            # exit(0)
-
     def get_corp_inspect_record(self): #从外部读取的检查情况、日期等信息
         if (not self.ws):
             self.load_ins_workbook(self.workbook_path)
@@ -135,14 +118,22 @@ class doc_generator: #固定的企业信息，从内部查询
             for row in rows:
                 if (row[2].value == self.corpname): #第3列是企业名称，作为匹配依据
                 #如果之前未在内部企业库取得数据，并且表有数据，则使用核查表的数据
-                    if (self.addr == '' and row[4].value != ''): #第5列是地址
+                    if  row[4].value != '': #第5列是地址
                         self.addr = row[4].value
-                    if (self.phone == '' and row[5].value != ''): #第6列是电话
+                    else:
+                        self.addr = ''
+                    if  row[5].value != '': #第6列是电话
                         self.phone = row[5].value
-                    if (self.regnum == '' and row[3].value != ''): #第4列是注册号
+                    else:
+                        self.phone = ''
+                    if  row[3].value != '': #第4列是注册号
                         self.regnum = row[3].value
-                    if (self.repperson == '' and row[6].value != ''): #第7列是法定代表人
+                    else:
+                        self.regnum = ''
+                    if row[6].value != '': #第7列是法定代表人
                         self.repperson = row[6].value
+                    else:
+                        self.repperson = ''
 
                     self.marker = row[0].value #第1列是页眉的标识
                     self.corpindex = row[1].value #第2列是页眉的企业序号

@@ -8,29 +8,39 @@ import os
 class data:
     def __init__(self):
         self.datacontent = ''
-        self.datatpl = Template("('${c}','${r}','${a}','${p}','${rp}','${cp}','${cph}','${inspection}',' ',NULL,NULL,0,0),\n")
+        self.datatpl = Template("('${c}','${r}','${a}','${rp}', '${cp}', 'active', '${div}'),\n")
+        self.div = ''
+        self.headtpl = ''
+        self.head = ''
 
-    def divselect(self):
+    def div_select(self):
         self.headtpl = Template('''
-insert into `app_shilingaic`.`${div}_corp`
-(`CorpName`, `RegNum`, `Addr`, `RepPerson`, `ContactPerson`, `InspectionStatus`, `PhoneCallRecord`, `Loca_x`, `Loca_y`, `Active`, `PicNum`) VALUES
-''')
+        UPDATE `hdscjg_database`.`ALL_corp` SET `Active` = 'not_active' WHERE `division` = '${div}';
+        insert into `hdscjg_database`.`ALL_corp` 
+        (`CorpName`, `RegNum`, `Addr`, `RepPerson`, `ContactPerson`, `Active`, `division` ) VALUES
+        ''')
+        print('请在下列名单中选择对应的监管所代码：\n'
+              '1、SL 狮岭\n'
+              '2、YH 裕华\n'
+              '3、TB 炭步\n'
+              '请输入两个英文字符代码:')
         self.div = input()
         self.head = self.headtpl.substitute(div=self.div)
-        
-    def loadworkbook(self):
+
+    def load_workbook(self):
+        print('正在读取XLSX文件中的用户名单......')
         try:
-            wb = load_workbook('待导入记录表.xlsx')
+            wb = load_workbook('TB.xlsx')
             self.ws = wb.worksheets[0]
         except FileNotFoundError:
-            print('当前目录没有“待导入记录表.xlsx”文件')
+            print('当前目录没有“TB.xlsx”文件')
             exit(0)
 
-        
-    def processtosql(self):
-        c=r=a=p=rp=cp=cph=ins=phcal=''
+    def process_to_sql(self):
+        print('正在处理用户名单......')
         rows = self.ws.rows
         for row in rows:
+            c = r = a = rp = cp = ''
             try:
                 c = ''.join(row[0].value.split())
             except AttributeError:
@@ -75,9 +85,10 @@ insert into `app_shilingaic`.`${div}_corp`
             except IndexError:
                 pass
             assert c != ''
-            self.datacontent += self.datatpl.substitute(corpname=c,regnum=r,addr=a,repperson=rp,contactperson=cp,inspection=ins,phonecall=phcal)
-    def savefile(self):
-        f = open(self.div + '.sql','wb')
+            self.datacontent += self.datatpl.substitute(c=c, r=r, a=a, rp=rp, cp=cp, div=self.div)
+
+    def save_file(self):
+        f = open(self.div + '.sql', 'wb')
         f.write(self.head.encode('utf8'))
         f.write(self.datacontent[:-2].encode('utf8'))
         f.write(b'''
@@ -85,14 +96,14 @@ on duplicate key update
 CorpName = Values(CorpName),
 Addr=values(addr),
 repperson = values(repperson),
-contactperson = values(contactperson);''')
+contactperson = values(contactperson),
+division = values(division);''')
         f.close()
-        
+
+
 if __name__ == '__main__':
     data = data()
-    data.divselect()
-    data.loadworkbook()
-    data.processtosql()
-    data.savefile() 
-                    
-        
+    data.div_select()
+    data.load_workbook()
+    data.process_to_sql()
+    data.save_file()
