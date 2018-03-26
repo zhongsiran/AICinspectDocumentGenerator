@@ -59,7 +59,7 @@ class DownloadInspectRecord:
                 selected_action = self.action_list[selected_action_no - 1]
                 for key in selected_action.keys():
                     print("即将下载以下行动的核查记录表：" + selected_action[key]+ '，请确认 （Y/N）')
-                    #confirm = input()
+                    # confirm = input()
 
                 input_command = input()
             except ValueError:

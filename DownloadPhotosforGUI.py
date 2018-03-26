@@ -228,8 +228,8 @@ class PhotoLibrary:
                 result.append(self.file_dict)
             else:
                 result.append('network_error')
-        #now = date.today()
-        #today = "%d-%d-%d" %(now.year,now.month,now.day)
+        # now = date.today()
+        # today = "%d-%d-%d" %(now.year,now.month,now.day)
         return result # 连接情况；字典长度；字典健列表；字典本身
         
     def divisionselector(self,division_index):
