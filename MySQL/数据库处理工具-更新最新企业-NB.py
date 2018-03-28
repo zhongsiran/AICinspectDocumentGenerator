@@ -9,7 +9,7 @@ import os
 class data:
     def __init__(self):
         self.datacontent = ''
-        self.datatpl = Template("('${c}','${r}','${a}','${rp}', '${cp}', '${nb}', 'active', '${div}'),\n")
+        self.datatpl = Template("('${c}','${r}','${a}','${rp}', '${cp}', 'active', '${div}'),\n")
         self.div = ''
         self.headtpl = ''
         self.head = ''
@@ -20,7 +20,7 @@ class data:
         self.headtpl = Template('''
         UPDATE `hdscjg_database`.`ALL_corp` SET `Active` = 'not_active' WHERE `division` = '${div}';
         insert into `hdscjg_database`.`ALL_corp` 
-        (`CorpName`, `RegNum`, `Addr`, `RepPerson`, `ContactPerson`, `nianbao_status`, `Active`, `division` ) VALUES
+        (`CorpName`, `RegNum`, `Addr`, `RepPerson`, `ContactPerson`, `Active`, `division` ) VALUES
         ''')
         print('请在下列名单中选择对应的监管所代码：\n'
               '1、SL 狮岭\n'
@@ -33,10 +33,10 @@ class data:
     def load_workbook(self):
         print('正在读取XLSX文件中的用户名单......')
         try:
-            wb = load_workbook('20180322裕华所业户.xlsx')
+            wb = load_workbook('更新最新企业.xlsx')
             self.ws = wb.worksheets[0]
         except FileNotFoundError:
-            print('当前目录没有“TB.xlsx”文件')
+            print('当前目录没有“更新最新企业.xlsx”文件')
             exit(0)
 
     def process_to_sql(self):
@@ -98,20 +98,19 @@ class data:
             except IndexError:
                 pass
             assert c != ''
-            self.datacontent += self.datatpl.substitute(c=c, r=r, a=a, rp=rp, cp=cp, nb=nb, div=self.div)
+            self.datacontent += self.datatpl.substitute(c=c, r=r, a=a, rp=rp, cp=cp, div=self.div)
 
     def save_file(self):
-        f = open(self.div + '.sql', 'wb')
+        f = open(self.div + '-最新企业（无年报信息）.sql', 'wb')
         f.write(self.head.encode('utf8'))
         f.write(self.datacontent[:-2].encode('utf8'))
         f.write(b'''
-on duplicate key update 
-CorpName = Values(CorpName),
-Addr=values(addr),
-repperson = values(repperson),
-contactperson = values(contactperson),
-nianbao_status = values(nianbao_status),
-division = values(division);''')
+        on duplicate key update 
+        CorpName = Values(CorpName),
+        Addr=values(addr),
+        repperson = values(repperson),
+        contactperson = values(contactperson),
+        division = values(division);''')
         f.close()
 
 
