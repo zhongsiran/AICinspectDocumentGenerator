@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from openpyxl import load_workbook
 from openpyxl import Workbook
 from string import Template
@@ -6,7 +6,7 @@ from datetime import date
 import os
 
 
-class data:
+class Data:
     def __init__(self):
         self.datacontent = ''
         self.datatpl = Template("('${c}','${r}','${a}','${rp}', '${cp}', '${nb}', 'active', '${div}'),\n")
@@ -14,7 +14,7 @@ class data:
         self.headtpl = ''
         self.head = ''
         now = date.today()
-        self.today = "%d-%d-%d" %(now.year, now.month, now.day -1)
+        self.today = "%d-%d-%d" % (now.year, now.month, now.day - 1)
 
     def div_select(self):
         self.headtpl = Template('''
@@ -105,18 +105,18 @@ class data:
         f.write(self.head.encode('utf8'))
         f.write(self.datacontent[:-2].encode('utf8'))
         f.write(b'''
-        on duplicate key update 
-        CorpName = Values(CorpName),
-        Addr=values(addr),
-        repperson = values(repperson),
-        contactperson = values(contactperson),
-        nianbao_status = values(nianbao_status),
-        division = values(division);''')
+            on duplicate key update 
+            CorpName = Values(CorpName),
+            Addr=values(addr),
+            repperson = values(repperson),
+            contactperson = values(contactperson),
+            nianbao_status = values(nianbao_status),
+            division = values(division);''')
         f.close()
 
 
 if __name__ == '__main__':
-    data = data()
+    data = Data()
     data.div_select()
     data.load_workbook()
     data.process_to_sql()

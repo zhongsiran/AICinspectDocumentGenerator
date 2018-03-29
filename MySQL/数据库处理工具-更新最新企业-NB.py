@@ -6,7 +6,7 @@ from datetime import date
 import os
 
 
-class data:
+class Data:
     def __init__(self):
         self.datacontent = ''
         self.datatpl = Template("('${c}','${r}','${a}','${rp}', '${cp}', 'active', '${div}'),\n")

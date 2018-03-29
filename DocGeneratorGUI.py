@@ -64,7 +64,7 @@ class DocGenerator:  # 固定的企业信息，从内部查询
         self.load_ins_workbook(workbook_path)
 
     def process_all_folders(self):  # 主处理函数
-        for singledir,subdirs,files in os.walk(self.original_root_dir):
+        for singledir, subdirs, files in os.walk(self.original_root_dir):
             if 'lib' not in singledir :
                 if self.corp_folder_match(singledir):  # 先从内置企业数据库中找、再从核查表中取得目标企业核查信息
                     self.original_current_path = singledir + '\\'
