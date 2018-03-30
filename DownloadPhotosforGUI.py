@@ -206,6 +206,8 @@ class PhotoLibrary:
             return True
 
     def getlinksdict(self, division_password, delimiter):
+        delimiter = self.division + '/' + delimiter
+        print(delimiter)
         data = {'secretkey': 'ZhongSiRan1990', 'div_pwd': division_password, 'div': self.division, 'delimiter': delimiter}
         pagepy=requests.post("https://shilingaic.applinzi.com/mylib/PyToolboxControllers/PhotoDownloaderListFile.php", data)
         result = []

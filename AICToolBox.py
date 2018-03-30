@@ -61,7 +61,7 @@ class MainFrame(wx.Frame):
         self.save_to_path_text_area = wx.TextCtrl(self.photo_download_page, wx.ID_ANY, "",
                                                   style=wx.TE_LEFT | wx.TE_MULTILINE | wx.TE_WORDWRAP)
         self.photo_download_password_text = wx.TextCtrl(self.photo_download_page, wx.ID_ANY, "", style=wx.TE_PASSWORD)
-        self.photo_download_delimiter_text = wx.TextCtrl(self.photo_download_page, wx.ID_ANY, "", style=wx.TE_WORDWRAP)
+        self.photo_download_delimiter_text = wx.TextCtrl(self.photo_download_page, wx.ID_ANY, u"日常监管", style=wx.TE_WORDWRAP)
         self.choose_download_path = wx.Button(self.photo_download_page, wx.ID_ANY,
                                               _(u"\u66f4\u6539\u4e0b\u8f7d\u8def\u5f84\n"), style=wx.BU_AUTODRAW)
         self.begin_download_photo = wx.Button(self.photo_download_page, wx.ID_ANY, _(u"\n\u5f00\u59cb\u4e0b\u8f7d\n"),
