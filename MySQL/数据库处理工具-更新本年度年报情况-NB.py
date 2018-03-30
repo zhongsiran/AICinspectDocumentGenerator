@@ -41,7 +41,7 @@ class Data:
 
     def process_to_sql(self):
         print('正在处理用户名单......')
-        rows = self.ws.rows
+        rows = self.ws[3:self.ws.max_row]
         for row in rows:
             c = r = a = rp = cp = ''
             try:

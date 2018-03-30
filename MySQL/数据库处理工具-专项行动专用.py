@@ -8,12 +8,12 @@ import os
 class data:
     def __init__(self):
         self.datacontent = ''
-        self.datatpl = Template("('${sp_action_no}','${xingdongming}','${daihao}','${corpname}','${regnum}','${startdate}','${enddate}'),\n")
+        self.datatpl = Template("('${sano}','${n}','${no}','${pre_r}', '${pre_n}', '${c}','${r}','${sd}','${ed}'),\n")
 
     def divselect(self):
         self.headtpl = Template('''
-insert into `app_shilingaic`.`${div}_zhuan_xiang_xing_dong`
-(`sp_action_no`,`sp_action_name`, `sp_action_daihao`, `sp_action_corpname`, `sp_action_regnum`, `sp_action_startdate`, `sp_action_enddate`) VALUES
+insert into `hdscjg_database`.`${div}_zhuan_xiang_xing_dong`
+(`sp_action_no`,`sp_action_name`, `sp_action_daihao`, `sp_action_pre_regnum`, `sp_action_pre_name`, `sp_action_corpname`, `sp_action_regnum`, `sp_action_startdate`, `sp_action_enddate`) VALUES
 ''')
         self.div = input()
         self.head = self.headtpl.substitute(div=self.div)
@@ -29,7 +29,7 @@ insert into `app_shilingaic`.`${div}_zhuan_xiang_xing_dong`
         
     def processtosql(self):
         x=daihao=corpname=r=startdate=enddate=''
-        rows = self.ws.rows
+        rows = self.ws[2:self.ws.max_row]
         for row in rows:
             try:
                 r = ''.join(row[4].value.split())
@@ -62,21 +62,33 @@ insert into `app_shilingaic`.`${div}_zhuan_xiang_xing_dong`
             except AttributeError:
                 enddate = ''
 
-            assert daihao != ''
-            assert r != ''
+            try:
+                pn = ''.join(row[7].value.split())
+            except AttributeError:
+                pn = row[7].value.split()
 
-            self.datacontent += self.datatpl.substitute(sp_action_no=no,xingdongming=x,daihao=daihao,corpname=corpname,regnum=r,startdate=startdate,enddate=enddate)
+            try:
+                pr = ''.join(row[8].value.split())
+            except AttributeError:
+                pr = row[7].value.split()
+
+            assert daihao != ''
+            assert r or pr != ''
+
+            self.datacontent += self.datatpl.substitute(sano=no, n=x, no=daihao, pre_r=pr, pre_n=pn, c=corpname, r=r, sd=startdate, ed=enddate)
+
     def savefile(self):
-        f = open(self.div + '_zhuangxiang.sql','wb')
+        f = open(self.div + '_zhuan_xiang.sql', 'wb')
         f.write(self.head.encode('utf8'))
         f.write(self.datacontent[:-2].encode('utf8'))
         f.close()
-        
+
+
 if __name__ == '__main__':
     data = data()
     data.divselect()
     data.loadworkbook()
     data.processtosql()
     data.savefile() 
-                    
-        
+
+
