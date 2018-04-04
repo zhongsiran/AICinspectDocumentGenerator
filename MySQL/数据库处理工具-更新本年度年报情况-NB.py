@@ -41,7 +41,7 @@ class Data:
 
     def process_to_sql(self):
         print('正在处理用户名单......')
-        rows = self.ws[3:self.ws.max_row]
+        rows = self.ws[3:self.ws.max_row]  # 2018.4.1起，从第3行起读取。
         for row in rows:
             c = r = a = rp = cp = ''
             try:

@@ -29,7 +29,7 @@ insert into `hdscjg_database`.`${div}_zhuan_xiang_xing_dong`
         
     def processtosql(self):
         x=daihao=corpname=r=startdate=enddate=''
-        rows = self.ws[2:self.ws.max_row]
+        rows = self.ws[4:self.ws.max_row] #  第一行是标题，第二行是
         for row in rows:
             try:
                 r = ''.join(row[4].value.split())
@@ -65,12 +65,12 @@ insert into `hdscjg_database`.`${div}_zhuan_xiang_xing_dong`
             try:
                 pn = ''.join(row[7].value.split())
             except AttributeError:
-                pn = row[7].value.split()
+                pn = row[7].value
 
             try:
                 pr = ''.join(row[8].value.split())
             except AttributeError:
-                pr = row[7].value.split()
+                pr = row[7].value
 
             assert daihao != ''
             assert r or pr != ''
