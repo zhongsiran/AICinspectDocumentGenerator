@@ -70,7 +70,7 @@ insert into `hdscjg_database`.`${div}_zhuan_xiang_xing_dong`
             try:
                 pr = ''.join(row[8].value.split())
             except AttributeError:
-                pr = row[7].value
+                pr = row[8].value
 
             assert daihao != ''
             assert r or pr != ''
