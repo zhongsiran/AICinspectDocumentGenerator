@@ -102,6 +102,4 @@ ENV/
 *.sql
 specialaction.php
 .DS_Store
-
-# Photos downloaded
-*.jpg
+workspace.xml
