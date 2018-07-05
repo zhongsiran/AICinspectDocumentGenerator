@@ -56,14 +56,16 @@ class DocGenerator:   # 固定的企业信息，从内部查询
 
         # 初始化工作路径
         self.original_root_dir = original_path
+        self.original_current_path = ''
         self.target_root_dir = target_path
+        self.target_current_path = ''
         self.workbook_path = workbook_path
         self.ins_tpl_path = ins_tpl_path
         self.img_tpl_path = img_tpl_path
 
         # 初始化结果统计
-        self.successdir = []
-        self.faildir = []
+        self.success_dirs = []
+        self.failed_dirs = []
 
         self.load_ins_workbook(workbook_path)
 
@@ -83,14 +85,14 @@ class DocGenerator:   # 固定的企业信息，从内部查询
                         self.generate_img_doc()
                         self.generate_inspect_record()
                         post_progress('成功生成文书！')
-                        self.successdir.append(singledir)
+                        self.success_dirs.append(singledir)
                     except Exception:
                         post_progress('生成过程中出错')
-                        self.faildir.append(singledir)
+                        self.failed_dirs.append(singledir)
                 elif 'lib' not in singledir:
-                    self.faildir.append(singledir)            
+                    self.failed_dirs.append(singledir)
             elif'lib' not in singledir:
-                self.faildir.append(singledir)            
+                self.failed_dirs.append(singledir)
 
     def corp_folder_match(self, folder_path):
         self.corp_name = re.sub(r'.*-', "", folder_path)   # 删除剩下企业名称
@@ -172,7 +174,7 @@ class DocGenerator:   # 固定的企业信息，从内部查询
                     image = self.original_current_path + file
                     img_doc_path = self.target_current_path + '\\' + self.corp_name + '-照片-' + str(index) + '.docx'  # 路径（全局变量）+字号+序号+格式
                     context = {
-                        'image': InlineImage(tpl,image,width=Mm(153)),  # 替换图片
+                        'image': InlineImage(tpl, image, width=Mm(153)),  # 替换图片
                         'date': self.date,   # 替换日期
                         'explanation': '以上为执法人员于' + str(self.date) + '对登记住所为' + str(self.address) + '的' \
                                        + self.corp_name + '进行核查时的照片。' + self.image_explanation,   # 替换说明
@@ -188,7 +190,7 @@ class DocGenerator:   # 固定的企业信息，从内部查询
                         content = file + '不是有效的图片文件，无法生成证据提取单'
                         post_progress(content)
                 except Exception:
-                    self.faildir.append('处理' + file + '时出错')
+                    self.failed_dirs.append('处理' + file + '时出错')
             else:
                 pass
 
@@ -203,27 +205,27 @@ class DocGenerator:   # 固定的企业信息，从内部查询
                 asking = '我执法人员通过问询周边业户得知，登记地址为' + self.address + '的' + self.corp_name + '，已不在此场所从事经营活动，去向未知。'
             # 确定替换的内容
             context = {
-                'corpname' : self.corp_name,
-                'addr' : self.address,
-                'date' : self.date,
-                'phone' : self.phone,
-                'hourmin' : self.hour_min,
-                'endhourmin' : self.end_hour_min,
-                'regnum' : self.registration_num,
-                'repperson' : self.represent_person,
-                'recexp' : self.record_explanation,
-                'asking' : asking,
-                'calldate' : self.call_date,
-                'callhour' : self.call_hour,
-                'callmin' : self.call_min,
-                'callresult' : self.call_result,
+                'corpname': self.corp_name,
+                'addr': self.address,
+                'date': self.date,
+                'phone': self.phone,
+                'hourmin': self.hour_min,
+                'endhourmin': self.end_hour_min,
+                'regnum': self.registration_num,
+                'repperson': self.represent_person,
+                'recexp': self.record_explanation,
+                'asking': asking,
+                'calldate': self.call_date,
+                'callhour': self.call_hour,
+                'callmin': self.call_min,
+                'callresult': self.call_result,
                 'marker': self.marker,
-                'corpindex' : self.corp_index
+                'corpindex': self.corp_index
             }
             tpl.render(context)
             tpl.save(record_path)
         except Exception as e:
-            print('210' +  e)
+            print('210' + e)
             
     def print_result(self):   # 打印结果
         post_progress('####' * 15)
@@ -233,10 +235,10 @@ class DocGenerator:   # 固定的企业信息，从内部查询
 联系人：钟思燃
 联系电话：661668
 --------处理结果---------------------''')
-        if(len(self.successdir) > 0):
+        if len(self.success_dirs) > 0:
             post_progress("成功在下列文件夹生成文书：")
-            for item in range(len(self.successdir)):
-                post_progress(str(item + 1) + ': ' + self.successdir[item])
+            for item in range(len(self.success_dirs)):
+                post_progress(str(item + 1) + ': ' + self.success_dirs[item])
                 post_progress('')
         post_progress('更多详情请看“处理结果.txt文件”')
         post_finished('处理完毕')
@@ -250,15 +252,15 @@ class DocGenerator:   # 固定的企业信息，从内部查询
 联系电话：661668
 
 -------------------处理结果---------------------\n''')
-        if len(self.successdir) > 0:
+        if len(self.success_dirs) > 0:
             result_file.write("成功在下列文件夹生成文书：\n")
-            for item in range(len(self.successdir)):
-                result_file.write(str(item + 1) + ': ' + self.successdir[item] + '\n')
+            for item in range(len(self.success_dirs)):
+                result_file.write(str(item + 1) + ': ' + self.success_dirs[item] + '\n')
                 result_file.write('-----------------------------------------------\n')
-        if len(self.faildir) > 0 :
+        if len(self.failed_dirs) > 0 :
             result_file.write("由于在核查记录表或企业信息库中未匹配到企业字号等原因，下列文件夹或文件未成功处理：\n")
-            for item in range(len(self.faildir)):
-                result_file.write(str(item + 1) + ': ' + self.faildir[item] + '\n')
+            for item in range(len(self.failed_dirs)):
+                result_file.write(str(item + 1) + ': ' + self.failed_dirs[item] + '\n')
 
     def del_wb(self):
         del self.ws
