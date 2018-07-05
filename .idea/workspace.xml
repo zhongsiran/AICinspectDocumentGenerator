@@ -2,62 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1491d653-eb45-4538-8ae5-34b573ce3a76" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL/数据库处理工具-专项行动专用.py" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/数据库处理工具-专项行动专用.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州井辉箱包有限公司/SL-日常监管-广州井辉箱包有限公司-SL-1_2018-04-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市柏联皮具有限公司/SL-日常监管-广州市柏联皮具有限公司-SL-1_2018-04-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市柏联皮具有限公司/SL-日常监管-广州市柏联皮具有限公司-SL-2_2018-04-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市柏联皮具有限公司/SL-日常监管-广州市柏联皮具有限公司-SL-3_2018-04-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭井辉手袋厂/SL-日常监管-广州市花都区狮岭井辉手袋厂-SL-1_2018-04-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭井辉手袋厂/SL-日常监管-广州市花都区狮岭井辉手袋厂-SL-2_2018-04-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-10_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-11_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-12_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-13_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-14_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-15_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-16_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-17_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-18_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-19_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-1_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-20_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-21_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-22_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-23_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-24_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-25_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-26_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-27_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-28_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-29_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-2_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-30_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-31_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-32_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-33_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-34_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-35_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-36_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-37_2018-03-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-3_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-4_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-5_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-6_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-7_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-8_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司/SL-日常监管-广州市花都区狮岭内务专用集团股份有限公司-SL-9_2018-03-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭测试用营业一部/SL-日常监管-广州市花都区狮岭测试用营业一部-SL-2_2018-03-28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭测试用营业一部/SL-日常监管-广州市花都区狮岭测试用营业一部-SL-2_2018-04-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州市花都区狮岭测试用营业一部/SL-日常监管-广州市花都区狮岭测试用营业一部-SL-3_2018-04-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州钰湖皮具有限公司/SL-日常监管-广州钰湖皮具有限公司-SL-1_2018-04-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州钰湖皮具有限公司/SL-日常监管-广州钰湖皮具有限公司-SL-2_2018-04-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-广州钰湖皮具有限公司/SL-日常监管-广州钰湖皮具有限公司-SL-3_2018-04-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-狮岭不合格农资商品行动一组/SL-日常监管-狮岭不合格农资商品行动一组-SL-1_2018-03-30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-狮岭不合格农资商品行动二组/SL-日常监管-狮岭不合格农资商品行动二组-SL-10_2018-03-30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-狮岭不合格农资商品行动二组/SL-日常监管-狮岭不合格农资商品行动二组-SL-11_2018-03-30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-狮岭不合格农资商品行动二组/SL-日常监管-狮岭不合格农资商品行动二组-SL-12_2018-03-30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlao/SL-日常监管-狮岭不合格农资商品行动二组/SL-日常监管-狮岭不合格农资商品行动二组-SL-13_2018-03-30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/DocGeneratorGUI.py" afterPath="$PROJECT_DIR$/DocGeneratorGUI.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,13 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="数据库处理工具-专项行动专用.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="数据库处理工具-专项行动专用.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-专项行动专用.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+            <state relative-caret-position="210">
+              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocGeneratorGUI.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DocGeneratorGUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-318">
+              <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
               <folding>
-                <element signature="e#23#57#0" expanded="true" />
+                <element signature="e#32#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,7 +45,13 @@
     <findStrings>
       <find>新扬</find>
       <find>worksheet</find>
+      <find>#</find>
+      <find>#</find>
     </findStrings>
+    <replaceStrings>
+      <replace>#</replace>
+      <replace>#</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -108,37 +70,42 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DocGeneratorGUI.py" />
         <option value="$PROJECT_DIR$/MySQL/MySQLProcessor-nophone.py" />
         <option value="$PROJECT_DIR$/MySQL/数据库处理工具-更新最新企业-NB.py" />
         <option value="$PROJECT_DIR$/MySQL/数据库处理工具-更新本年度年报情况-NB.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/MySQL/数据库处理工具-专项行动专用.py" />
+        <option value="$PROJECT_DIR$/DocGeneratorGUI.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1832" />
-    <option name="height" value="1096" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1408" />
+    <option name="height" value="809" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="AICinspectDocumentGenerator" type="b2602c69:ProjectViewProjectNode" />
               <item name="AICinspectDocumentGenerator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AICinspectDocumentGenerator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AICinspectDocumentGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="MySQL" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,7 +132,6 @@
   </component>
   <component name="RunManager" selected="Python.数据库处理工具-专项行动专用">
     <configuration name="数据库处理工具-更新本年度年报情况-NB" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="AICinspectDocumentGenerator" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -176,6 +142,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AICinspectDocumentGenerator" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MySQL/数据库处理工具-更新本年度年报情况-NB.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -183,7 +150,6 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="数据库处理工具-专项行动专用" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="AICinspectDocumentGenerator" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -194,24 +160,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AICinspectDocumentGenerator" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MySQL/数据库处理工具-专项行动专用.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list>
-      <item itemvalue="Python.数据库处理工具-更新本年度年报情况-NB" />
-      <item itemvalue="Python.数据库处理工具-专项行动专用" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.数据库处理工具-更新本年度年报情况-NB" />
+      <item index="1" class="java.lang.String" itemvalue="Python.数据库处理工具-专项行动专用" />
     </list>
     <recent_temporary>
-      <list>
-        <item itemvalue="Python.数据库处理工具-专项行动专用" />
-        <item itemvalue="Python.数据库处理工具-更新本年度年报情况-NB" />
-        <item itemvalue="Python.数据库处理工具-专项行动专用" />
-        <item itemvalue="Python.数据库处理工具-更新本年度年报情况-NB" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.数据库处理工具-专项行动专用" />
+        <item index="1" class="java.lang.String" itemvalue="Python.数据库处理工具-更新本年度年报情况-NB" />
+        <item index="2" class="java.lang.String" itemvalue="Python.数据库处理工具-专项行动专用" />
+        <item index="3" class="java.lang.String" itemvalue="Python.数据库处理工具-更新本年度年报情况-NB" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -252,49 +222,66 @@
       <option name="project" value="LOCAL" />
       <updated>1523232319942</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="格式修正">
+      <created>1530795419145</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1530795419145</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="23" width="1408" height="809" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49309245" visible="true" weight="0.23645833" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.15621679" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" sideWeight="0.5069075" side_tool="true" visible="true" weight="0.23645833" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24786931" sideWeight="0.49309245" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971507" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15621679" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23645833" sideWeight="0.5069075" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="格式修正" />
     <MESSAGE value="专项行动处理PY修正" />
     <MESSAGE value="git ignore 忽略 JPG格式" />
-    <option name="LAST_COMMIT_MESSAGE" value="git ignore 忽略 JPG格式" />
+    <MESSAGE value="格式修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="格式修正" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-专项行动专用.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-专项行动专用.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1323">
           <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-          <folding>
-            <element signature="e#23#57#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -302,61 +289,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1593">
           <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
-          <folding>
-            <element signature="e#23#57#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/openpyxl/workbook/workbook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2079">
-          <caret line="77" column="41" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/openpyxl/reader/excel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4374">
-          <caret line="162" column="46" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/openpyxl/workbook/workbook.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/openpyxl/reader/excel.py" />
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-更新本年度年报情况-NB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1161">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-更新最新企业-NB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-专项行动专用.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <element signature="e#23#57#0" expanded="true" />
-          </folding>
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-更新本年度年报情况-NB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1269">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-更新最新企业-NB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -377,21 +348,21 @@
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-更新最新企业-NB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-更新最新企业-NB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-更新本年度年报情况-NB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1806">
-          <caret line="43" column="63" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
+          <caret line="43" column="63" lean-forward="false" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -399,14 +370,14 @@
     <entry file="file://$PROJECT_DIR$/DocGeneratorGUI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2352">
-          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+          <caret line="67" column="32" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DocGeneratorGUI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2814">
-          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+          <caret line="67" column="32" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -414,7 +385,7 @@
     <entry file="file://$PROJECT_DIR$/DocGeneratorGUI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="12" />
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -423,66 +394,49 @@
     <entry file="file://$PROJECT_DIR$/MySQL/MySQLProcessor-wuzhao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-294">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/MySQLProcessor-nophone.py" />
-    <entry file="file://$PROJECT_DIR$/MySQL/SL-更新本年度年报情况.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10190">
-          <caret line="642" column="49" selection-start-line="642" selection-start-column="49" selection-end-line="642" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DocGeneratorGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MySQL/SL-更新本年度年报情况.sql" />
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-更新最新企业-NB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-更新本年度年报情况-NB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
-          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <caret line="106" column="5" lean-forward="false" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/openpyxl/reader/excel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4374">
-          <caret line="162" column="46" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/openpyxl/workbook/workbook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2079">
-          <caret line="77" column="41" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/openpyxl/reader/excel.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/openpyxl/workbook/workbook.py" />
     <entry file="file://$PROJECT_DIR$/MySQL/数据库处理工具-专项行动专用.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="210">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DocGeneratorGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-318">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
           <folding>
-            <element signature="e#23#57#0" expanded="true" />
+            <element signature="e#32#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
