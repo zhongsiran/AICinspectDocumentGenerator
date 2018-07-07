@@ -102,4 +102,5 @@ ENV/
 *.sql
 specialaction.php
 .DS_Store
-workspace.xml
+
+.idea/
