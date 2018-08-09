@@ -1,19 +1,11 @@
-#-*- coding: utf-8 -*-
-'''
-
-'''
 import os
 import re
-# import corpinfo  # 自制企业信息模块
-# import chntoday  # 自制当天年月日格式
 from docxtpl import DocxTemplate, InlineImage   # 根据DOCX模板生成结果用
-from docx.shared import Mm, Inches, Pt    # 图像 for height and width you have to use millimeters (Mm), inches or points(Pt) class :
-from openpyxl import Workbook   # 读取XLSX文件用
+from docx.shared import Mm    # 图像 for height and width you have to use millimeters (Mm), inches or points(Pt) class :
 from openpyxl import load_workbook   # 读取XLSX文件用
-from openpyxl.utils import get_column_letter  # 读取XLSX文件用
 import threading
 from wx.lib.pubsub import pub
-import wx
+from PIL import Image
 
 thread_lock = threading.Lock()
 
@@ -36,23 +28,26 @@ class DocGeneratorMainThread(threading.Thread):
 class DocGenerator:   # 固定的企业信息，从内部查询
     def __init__(self, original_path, target_path, workbook_path, ins_tpl_path, img_tpl_path):
         # 初始化企业信息
+        self.corp_table_attributes = {'企业名称': 2}
+        self.attributes_values = {'address': '', 'registration_num': '', 'phone': '', 'represent_person': '',
+                                      'date': ''}
         self.corp_name = ""
-        self.address = ""
-        self.registration_num = ""
-        self.phone = ""
-        self.represent_person = ""
-        self.date = ""
-        self.call_date = ""
-        self.call_hour = ""
-        self.call_min = ""
-        self.image_explanation = ""
-        self.record_explanation = ""
-        self.marker = " "
-        self.corp_index = " "
-        self.hour_min = ''
-        self.end_hour_min = ''
-        self.call_result = ''
-        self.asking_photo = False
+        # self.address = ""
+        # self.registration_num = ""
+        # self.phone = ""
+        # self.represent_person = ""
+        # self.date = ""
+        # self.call_date = ""
+        # self.call_hour = ""
+        # self.call_min = ""
+        # self.image_explanation = ""
+        # self.record_explanation = ""
+        # self.marker = " "
+        # self.corp_index = " "
+        # self.hour_min = ''
+        # self.end_hour_min = ''
+        # self.call_result = ''
+        # self.asking_photo = False
 
         # 初始化工作路径
         self.original_root_dir = original_path
@@ -117,41 +112,24 @@ class DocGenerator:   # 固定的企业信息，从内部查询
     def get_corp_inspect_record(self):  # 从外部读取的检查情况、日期等信息
         if not self.ws:
             self.load_ins_workbook(self.workbook_path)
+        elif self.corp_table_attributes == {'企业名称': 2}:
+            first_row = self.ws.iter_rows(min_row=1, max_row=1)
+            for cells in first_row:
+                for cell in cells:
+                    if cell.value:
+                        self.corp_table_attributes[cell.value] = cell.col_idx - 1
         else:
+            # print(self.corp_table_attributes)
             found = False
-            rows = self.ws.rows
+            rows = self.ws.iter_rows(min_row=2, max_row=self.ws.max_row)
             for row in rows:
-                if row[2].value == self.corp_name:  # 第3列是企业名称，作为匹配依据
-                    # 如果之前未在内部企业库取得数据，并且表有数据，则使用核查表的数据
-                    if row[4].value != '':  # 第5列是地址
-                        self.address = row[4].value
-                    else:
-                        self.address = ''
-                    if row[5].value != '':  # 第6列是电话
-                        self.phone = row[5].value
-                    else:
-                        self.phone = ''
-                    if row[3].value != '':  # 第4列是注册号
-                        self.registration_num = row[3].value
-                    else:
-                        self.registration_num = ''
-                    if row[6].value != '':  # 第7列是法定代表人
-                        self.represent_person = row[6].value
-                    else:
-                        self.represent_person = ''
-
-                    self.marker = row[0].value  # 第1列是页眉的标识
-                    self.corp_index = row[1].value  # 第2列是页眉的企业序号
-                    self.date = row[9].value  # 第10列是核查日期
-                    self.hour_min = row[10].value  # 第11列是核查开始时间
-                    self.end_hour_min = row[11].value  # 第12列是核查结束时间
-                    self.image_explanation = str(row[12].value)  # 核查情况
-                    self.record_explanation = str(row[12].value)  # 核查情况
-                    self.call_date = row[13].value  # 打电话日期
-                    self.call_hour = row[14].value  # 打电话时
-                    self.call_min = row[15].value  # 打电话分
-                    self.call_result = row[16].value  # 打电话情况
-                    self.asking_photo = row[17].value  # 是否有询问周边人员的照片
+                print('企业名称对应的列是：' + str(self.corp_table_attributes['企业名称'] + 1))
+                if row[self.corp_table_attributes['企业名称']].value == self.corp_name:
+                    for attribute_name in self.corp_table_attributes:
+                        if row[self.corp_table_attributes[attribute_name]].value != '':  # 遍历取得参数
+                            self.attributes_values[attribute_name] = row[self.corp_table_attributes[attribute_name]].value
+                        else:
+                            self.attributes_values[attribute_name] = ''
 
                     found = True   # 表示成功取得本户应有资料
                     break
@@ -173,56 +151,31 @@ class DocGenerator:   # 固定的企业信息，从内部查询
                     tpl = DocxTemplate(self.img_tpl_path)  # 指定的模板
                     image = self.original_current_path + file
                     img_doc_path = self.target_current_path + '\\' + self.corp_name + '-照片-' + str(index) + '.docx'  # 路径（全局变量）+字号+序号+格式
-                    context = {
-                        'image': InlineImage(tpl, image, width=Mm(153)),  # 替换图片
-                        'date': self.date,   # 替换日期
-                        'explanation': '以上为执法人员于' + str(self.date) + '对登记住所为' + str(self.address) + '的' \
-                                       + self.corp_name + '进行核查时的照片。' + self.image_explanation,   # 替换说明
-                        'marker': self.marker,
-                        'corpindex': self.corp_index,
-                        'regnum': self.registration_num,
-                        'corpname': self.corp_name
-                    }
+
+                    img = Image.open(image)
+                    if img.size[0] > img.size[1]:
+                        self.attributes_values['image'] = InlineImage(tpl, image, width=Mm(153))  # 替换图片
+                    else:
+                        self.attributes_values['image'] = InlineImage(tpl, image, width=Mm(130))  # 替换图片
+
                     try:
-                        tpl.render(context)  # 执行替换
+                        tpl.render(self.attributes_values)  # 执行替换
                         tpl.save(img_doc_path)  # 保存文件
                     except UnrecognizedImageError:
                         content = file + '不是有效的图片文件，无法生成证据提取单'
                         post_progress(content)
                 except Exception:
-                    self.failed_dirs.append('处理' + file + '时出错')
+                    self.failed_dirs.append('处理' + file + '的图片时出错')
             else:
                 pass
 
     def generate_inspect_record(self):  # 生成现场笔录的函数
         try:
-            tpl = DocxTemplate(self.ins_tpl_path)   # 指定的模板
+            tpl = DocxTemplate(self.ins_tpl_path)   # 指定的模板F
             # 确定文件保存路径
             record_path = self.target_current_path + '\\' + self.corp_name + '-现场笔录' + '.docx'   # 路径（全局变量）+字号+格式
-            asking = ''
-            # 如果表格中记录有询问照片，则加入相关表述。
-            if self.asking_photo == "是":
-                asking = '我执法人员通过问询周边业户得知，登记地址为' + self.address + '的' + self.corp_name + '，已不在此场所从事经营活动，去向未知。'
             # 确定替换的内容
-            context = {
-                'corpname': self.corp_name,
-                'addr': self.address,
-                'date': self.date,
-                'phone': self.phone,
-                'hourmin': self.hour_min,
-                'endhourmin': self.end_hour_min,
-                'regnum': self.registration_num,
-                'repperson': self.represent_person,
-                'recexp': self.record_explanation,
-                'asking': asking,
-                'calldate': self.call_date,
-                'callhour': self.call_hour,
-                'callmin': self.call_min,
-                'callresult': self.call_result,
-                'marker': self.marker,
-                'corpindex': self.corp_index
-            }
-            tpl.render(context)
+            tpl.render(self.attributes_values)
             tpl.save(record_path)
         except Exception as e:
             print('210' + e)
