@@ -230,7 +230,7 @@ class MainFrame(wx.Frame):
         sizer_11.Add(bitmap_8, 0, 0, 0)
         sizer_11.Add((80, 20), 0, 0, 0)
         func_intro_label = wx.StaticText(self.function_index_page, wx.ID_ANY, _(
-            u"\u5e7f\u5dde\u5e02\u82b1\u90fd\u533a\u5e02\u573a\u548c\u8d28\u91cf\u76d1\u7763\u7ba1\u7406\u5c40\n\u76d1\u7ba1\u4e91\u914d\u5957\u5de5\u5177\u7bb1"),
+            u"\u5e7f\u5dde\u5e02\u82b1\u90fd\u533a\u5e02\u573a\u548c\u8d28\u91cf\u76d1\u7763\u7ba1\u7406\u5c40\n\u76d1\u7ba1\u4e91\u914d\u5957\u5de5\u5177\u7bb1 ver.1853"),
                                          style=wx.ALIGN_CENTER)
         func_intro_label.SetFont(wx.Font(20, wx.MODERN, wx.NORMAL, wx.BOLD, 0, "楷体_GB2312"))
         sizer_11.Add(func_intro_label, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
@@ -393,8 +393,8 @@ class MainFrame(wx.Frame):
         doc_gen_right_side.Add(self.doc_gen_stop, 0, wx.ALIGN_CENTER | wx.EXPAND, 0)
         doc_gen_root_sizer.Add(doc_gen_right_side, 1, wx.EXPAND, 0)
         self.doc_gen_page.SetSizer(doc_gen_root_sizer)
-        self.Entrance.AddPage(self.function_index_page, _(u"\u529f\u80fd\u4ecb\u7ecd"))
-        self.Entrance.AddPage(self.photo_download_page, _(u"\u4e91\u7aef\u7167\u7247\u4e0b\u8f7d\u5668"))
+        # self.Entrance.AddPage(self.function_index_page, _(u"\u529f\u80fd\u4ecb\u7ecd"))
+        # self.Entrance.AddPage(self.photo_download_page, _(u"\u4e91\u7aef\u7167\u7247\u4e0b\u8f7d\u5668"))
         self.Entrance.AddPage(self.doc_gen_page, _(u"\u6838\u67e5\u6587\u4e66\u751f\u6210\u5668"))
         self.Entrance.AddPage(self.Entrance_, _(
             u"\u300a\u4f01\u4e1a\u4fe1\u606f\u4e0e\u6838\u67e5\u8bb0\u5f55\u8868\u3009\u4e0b\u8f7d\u5668"))
@@ -642,8 +642,8 @@ class AICToolbox(wx.App):
         设定当前文件夹为默认路径
         设定结果窗口启动内容
         '''
-        self.frame.save_to_path_text_area.SetValue(cwd)
-        self.frame.update_pd_result_text(u'成功启动\n请选择监管所；\n默认下载到本程序所在的文件夹。')
+        self.frame.save_to_path_text_area.SetValue(cwd + "\\photos")
+        self.frame.update_pd_result_text(u'成功启动\n请选择监管所；\n默认下载到本程序所在的文件夹中的photos文件夹。\n“子文件夹”填写示例一：SL/电动车、摩托车定点监管对象名录”\n“子文件夹”填写示例二：SL/日常监管”\n SL对应狮岭，不同的所用对应的大写首字母')
         # 照片下载器用结束
         '''
         以下为文书生成器用：
