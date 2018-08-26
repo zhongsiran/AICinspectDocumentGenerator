@@ -9,7 +9,8 @@ import os
 class Data:
     def __init__(self):
         self.datacontent = ''
-        self.datatpl = Template("('${c}','${r}','${a}','${rp}', '${cp}', 'active', '${div}'),\n")
+        self.datatpl = Template("('${c}','${r}','${a}','${p}', \
+            '${rp}', '${cp}', '${cph}', 'active', '${div}'),\n")
         self.div = ''
         self.headtpl = ''
         self.head = ''
@@ -18,9 +19,11 @@ class Data:
 
     def div_select(self):
         self.headtpl = Template('''
-        UPDATE `hdscjg_database`.`ALL_corp` SET `Active` = 'not_active' WHERE `division` = '${div}';
-        insert into `hdscjg_database`.`ALL_corp` 
-        (`CorpName`, `RegNum`, `Addr`, `RepPerson`, `ContactPerson`, `Active`, `division` ) VALUES
+        UPDATE `app_shilingaic`.`ALL_corp` SET `Active` = 'not_active' WHERE `division` = '${div}';
+        insert into `app_shilingaic`.`ALL_corp` 
+        (`CorpName`, `RegNum`, `Addr`, `phone`, \
+`RepPerson`, `ContactPerson`, `contactphone`, \
+`Active`, `division` ) VALUES
         ''')
         print('请在下列名单中选择对应的监管所代码：\n'
               '1、SL 狮岭\n'
@@ -42,6 +45,7 @@ class Data:
     def process_to_sql(self):
         print('正在处理用户名单......')
         rows = self.ws[3:self.ws.max_row]
+        # rows = self.ws[5000:6000]
         for row in rows:
             c = r = a = rp = cp = ''
             try:
@@ -65,14 +69,14 @@ class Data:
                 p = ''
 
             # 以下读取年报情况列，并根据年报情况处理导入的内容，对于未填报者，增加更新时间标识。
-            try:
-                nb = ''.join(row[4].value.split())
-            except AttributeError:
-                nb = row[4].value
-            if nb == '未填报':
-                nb = '17年度：截至' + self.today + nb
-            else:
-                nb = '17年度：' + nb
+            # try:
+            #     nb = ''.join(row[4].value.split())
+            # except AttributeError:
+            #     nb = row[4].value
+            # if nb == '未填报':
+            #     nb = '17年度：截至' + self.today + nb
+            # else:
+            #     nb = '17年度：' + nb
 
             try:
                 rp = ''.join(row[7].value.split())
@@ -89,19 +93,20 @@ class Data:
             except AttributeError:
                 cph = ''
 
-            try:
-                ins = row[10].value 
-            except IndexError:
-                pass
-            try:
-                phcal = row[11].value
-            except IndexError:
-                pass
+            # try:
+            #     ins = row[10].value 
+            # except IndexError:
+            #     pass
+            # try:
+            #     phcal = row[11].value
+            # except IndexError:
+            #     pass
             assert c != ''
-            self.datacontent += self.datatpl.substitute(c=c, r=r, a=a, rp=rp, cp=cp, div=self.div)
+            self.datacontent += self.datatpl.substitute(c=c, r=r, a=a, p=p, rp=rp,\
+             cp=cp, cph=cph, div=self.div)
 
     def save_file(self):
-        f = open(self.div + '-最新企业（无年报信息）.sql', 'wb')
+        f = open(self.today +  self.div + '-最新企业（无年报信息）.sql', 'wb')
         f.write(self.head.encode('utf8'))
         f.write(self.datacontent[:-2].encode('utf8'))
         f.write(b'''
@@ -110,12 +115,15 @@ class Data:
         Addr=values(addr),
         repperson = values(repperson),
         contactperson = values(contactperson),
-        division = values(division);''')
+        division = values(division),
+        active = values(active),
+        phone = values(phone),
+        contactphone = values(contactphone);''')
         f.close()
 
 
 if __name__ == '__main__':
-    data = data()
+    data = Data()
     data.div_select()
     data.load_workbook()
     data.process_to_sql()

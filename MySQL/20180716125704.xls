@@ -1,0 +1,2560 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel"
+      xmlns="http://www.w3.org/TR/REC-html40">
+	<head>
+		
+<style type="text/css">
+	table.tableizer-table {
+	border: 1px solid #CCC; font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+} 
+.tableizer-table td {
+	padding: 4px;
+	margin: 3px;
+	border: 1px solid #ccc;
+}
+.tableizer-table th {
+	background-color: #104E8B; 
+	color: #FFF;
+	font-weight: bold;
+}
+</style>	
+	
+		<title>导出统计</title>
+		<meta http-equiv="Content-Type" content="applicationnd.ms-excel;charset=utf-8"/>
+	</head>
+
+	<body>
+<table width="100%" class="tableizer-table">
+<tr class="tableizer-firstrow"><th colspan="10">2018年度年报查询结果列表</th></tr>
+ <tr>
+  	<td width="20%" align="center">名称</td>
+  	<td width="13%" align="center">注册号</td>
+  	<td width="22%" align="center">地址</td>
+  	<td width="10%" align="center">联系方式</td>
+  	<td width="7%" align="center">年报状态</td>
+  	<td width="10%" align="center">填报时间</td>
+  	<td width="18%" align="center">管辖机关</td>
+  	<td width="18%" align="center">法定代表人（经营者、执行人、负责人）</td>
+  	<td width="18%" align="center">联络员姓名</td>
+  	<td width="18%" align="center">联络员手机号</td>
+  	</tr>
+
+	        <tr>
+	        	<td align="left">广州市宏顺皮具有限公司&nbsp;</td>
+	            <td>440101400077514&nbsp;</td>
+	            <td>广州市花都区狮岭镇岭南工业聚集点工业二路7号&nbsp;</td>
+	            <td>36968287&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	CHIU FRANCOIS&nbsp;
+	            </td>
+	            <td>
+	            	王东亚&nbsp;
+	            </td>
+	            <td>
+	            	13609603434&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州莎萨信息咨询有限公司&nbsp;</td>
+	            <td>440101400164593&nbsp;</td>
+	            <td>广州市花都区狮岭大道西91号之一第10层1001房&nbsp;</td>
+	            <td>83177070&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	姚文静&nbsp;
+	            </td>
+	            <td>
+	            	13726819246&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市万意发皮具有限公司&nbsp;</td>
+	            <td>440101400116856&nbsp;</td>
+	            <td>广州市花都区狮岭镇金狮大道南&nbsp;</td>
+	            <td>86910003&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	万邦韩&nbsp;
+	            </td>
+	            <td>
+	            	陈疏影&nbsp;
+	            </td>
+	            <td>
+	            	18928798876&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市大展眼镜有限公司&nbsp;</td>
+	            <td>440101400066585&nbsp;</td>
+	            <td>广州市花都区狮岭镇田心路&nbsp;</td>
+	            <td>86845155&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	陈为镛&nbsp;
+	            </td>
+	            <td>
+	            	王安凯&nbsp;
+	            </td>
+	            <td>
+	            	13711230065&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">亚太（广州）商务咨询有限公司&nbsp;</td>
+	            <td>440121400001148&nbsp;</td>
+	            <td>广州市花都区狮岭镇阳光6号园区5号楼211室&nbsp;</td>
+	            <td>13535280863&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市阿把特贸易有限公司&nbsp;</td>
+	            <td>440121400000758&nbsp;</td>
+	            <td>广州市花都区狮岭镇尚勤路116号第五层龙玑汇自编B537、B555&nbsp;</td>
+	            <td>18665018757&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	Leesujin&nbsp;
+	            </td>
+	            <td>
+	            	18665018757&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州洛纽连线皮具有限公司&nbsp;</td>
+	            <td>440101400111828&nbsp;</td>
+	            <td>广州市花都区狮岭镇合成村泮塘社3-1第1、3-5层半&nbsp;</td>
+	            <td>86981120&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	SARA NAGHEDI&nbsp;
+	            </td>
+	            <td>
+	            	苏远齐&nbsp;
+	            </td>
+	            <td>
+	            	13710387292&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州乔熙娅箱包有限公司&nbsp;</td>
+	            <td>440101400088814&nbsp;</td>
+	            <td>广州市花都区狮岭街南方皮革皮具南合三街6号第三层&nbsp;</td>
+	            <td>13632237226&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	魏喜&nbsp;
+	            </td>
+	            <td>
+	            	刘文清&nbsp;
+	            </td>
+	            <td>
+	            	18620696965&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广东三元麦当劳食品有限公司花都狮岭盘古路分店&nbsp;</td>
+	            <td>440101400138023&nbsp;</td>
+	            <td>广州市花都区狮岭镇自编盘古中路3号铺1-4房&nbsp;</td>
+	            <td>83635008&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	陆云帆&nbsp;
+	            </td>
+	            <td>
+	            	江秋燕&nbsp;
+	            </td>
+	            <td>
+	            	15920586176&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州港堡实业有限公司&nbsp;</td>
+	            <td>440121400001316&nbsp;</td>
+	            <td>广州市花都区狮岭镇联合村联六社新村二街12号&nbsp;</td>
+	            <td>13535338374&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州欧赐尔康生物科技有限公司&nbsp;</td>
+	            <td>440121400001445&nbsp;</td>
+	            <td>广州市花都区狮岭镇如意街60号第四层&nbsp;</td>
+	            <td>15875347262&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州锦钰贸易有限公司&nbsp;</td>
+	            <td>440121400001496&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴村新华庄新区二街24号（自主申报）&nbsp;</td>
+	            <td>13435663069&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州壮壮食品有限公司&nbsp;</td>
+	            <td>440121000264709&nbsp;</td>
+	            <td>广州市花都区狮岭镇前进村自编联珠坑国道南二巷3号第1-2层（可作厂房使用）&nbsp;</td>
+	            <td>13726775981&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	刘纯凯&nbsp;
+	            </td>
+	            <td>
+	            	15322265620&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州金比贸易有限公司&nbsp;</td>
+	            <td>440121400001084&nbsp;</td>
+	            <td>广州市花都区狮岭大道91号龙头市场24栋538房&nbsp;</td>
+	            <td>18588862700&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州翠明贸易有限公司&nbsp;</td>
+	            <td>440121400001197&nbsp;</td>
+	            <td>广州市花都区狮岭镇联合村狮岭（国际）皮革皮具城三期A区九街29、31号&nbsp;</td>
+	            <td>13632183800&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州豪承贸易有限公司&nbsp;</td>
+	            <td>440101400002521&nbsp;</td>
+	            <td>广州市花都区宝峰南路53号1008房&nbsp;</td>
+	            <td>38023175&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	林子豪&nbsp;
+	            </td>
+	            <td>
+	            	利健俞&nbsp;
+	            </td>
+	            <td>
+	            	13710749691&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广东新邦物流有限公司花都狮岭合成营业部&nbsp;</td>
+	            <td>440101400108311&nbsp;</td>
+	            <td>广州市花都区狮岭镇杨赤路南航路口对面&nbsp;</td>
+	            <td>28616330&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	何平&nbsp;
+	            </td>
+	            <td>
+	            	石欣&nbsp;
+	            </td>
+	            <td>
+	            	15014207900&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市花都坤泰眼镜有限公司&nbsp;</td>
+	            <td>440101400164448&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴村&nbsp;</td>
+	            <td>86912180&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	黄文德&nbsp;
+	            </td>
+	            <td>
+	            	刘丽霞&nbsp;
+	            </td>
+	            <td>
+	            	13926239125&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市喻丝圆实业有限公司&nbsp;</td>
+	            <td>440101400087707&nbsp;</td>
+	            <td>广州市花都区狮岭镇喻丝圆路29号&nbsp;</td>
+	            <td>86837266&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	黄政雄&nbsp;
+	            </td>
+	            <td>
+	            	谭黎明&nbsp;
+	            </td>
+	            <td>
+	            	13710583549&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市查顿贸易有限公司&nbsp;</td>
+	            <td>440121400000305&nbsp;</td>
+	            <td>广州市花都区狮岭镇宝峰路102号之二&nbsp;</td>
+	            <td>13411155558&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	潘美芳&nbsp;
+	            </td>
+	            <td>
+	            	18302061976&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市小元服装有限公司&nbsp;</td>
+	            <td>440101400089454&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴路42号&nbsp;</td>
+	            <td>36810515&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	施又菁&nbsp;
+	            </td>
+	            <td>
+	            	周锐深&nbsp;
+	            </td>
+	            <td>
+	            	13544568189&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州荣展机械设备有限公司&nbsp;</td>
+	            <td>440101400167678&nbsp;</td>
+	            <td>广州市花都区狮岭镇山前大道中65号B栋厂房F201室&nbsp;</td>
+	            <td>00000000&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	赵传顺&nbsp;
+	            </td>
+	            <td>
+	            	13632103018&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州鹰堡美发用品厂有限公司双龙分公司&nbsp;</td>
+	            <td>440101400084714&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴村双龙经济社村前路西&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	刘向杰&nbsp;
+	            </td>
+	            <td>
+	            	罗艳辉&nbsp;
+	            </td>
+	            <td>
+	            	13570209652&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市旺鼎餐饮有限公司狮岭东升分公司&nbsp;</td>
+	            <td>440101400023616&nbsp;</td>
+	            <td>广州市花都区狮岭盘古路金炜达商业楼首、二层&nbsp;</td>
+	            <td>1111111111&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	韩玉麟&nbsp;
+	            </td>
+	            <td>
+	            	夏卫萍&nbsp;
+	            </td>
+	            <td>
+	            	13416333166&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市振利皮具有限公司&nbsp;</td>
+	            <td>440101400116848&nbsp;</td>
+	            <td>广州市花都区狮岭镇金狮大道南&nbsp;</td>
+	            <td>86910003&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	周则斌&nbsp;
+	            </td>
+	            <td>
+	            	陈疏影&nbsp;
+	            </td>
+	            <td>
+	            	18928798876&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市俞锋织造有限公司&nbsp;</td>
+	            <td>440101400105745&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴村&nbsp;</td>
+	            <td>86846467&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	吴柏璋&nbsp;
+	            </td>
+	            <td>
+	            	侯洪梅&nbsp;
+	            </td>
+	            <td>
+	            	13711713616&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州宏峰皮具有限公司&nbsp;</td>
+	            <td>440101400087233&nbsp;</td>
+	            <td>广州市花都区狮岭镇杨赤公路旁合和工业区A5-A6栋&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	胡立多&nbsp;
+	            </td>
+	            <td>
+	            	周光站&nbsp;
+	            </td>
+	            <td>
+	            	1392620858&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">志圣科技(广州)有限公司&nbsp;</td>
+	            <td>440101400035468&nbsp;</td>
+	            <td>广州市花都区狮岭镇第二工业区利和路６号&nbsp;</td>
+	            <td>86846341&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	梁茂忠&nbsp;
+	            </td>
+	            <td>
+	            	冼坤娣&nbsp;
+	            </td>
+	            <td>
+	            	13556150062&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州韦文双钮扣有限公司&nbsp;</td>
+	            <td>440101400052895&nbsp;</td>
+	            <td>广州市花都区狮岭镇107国道西前进村第二工业区&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	韦文双&nbsp;
+	            </td>
+	            <td>
+	            	郭晴雯&nbsp;
+	            </td>
+	            <td>
+	            	13790914076&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州可蕾娜企业管理有限公司&nbsp;</td>
+	            <td>440121400000071&nbsp;</td>
+	            <td>广州市花都区狮岭镇自编合成南路7号第1栋901房（仅限办公用途）&nbsp;</td>
+	            <td>13527681881&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	谢香玟&nbsp;
+	            </td>
+	            <td>
+	            	13760829244&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州玮诗皮业有限公司&nbsp;</td>
+	            <td>440101400073283&nbsp;</td>
+	            <td>广州市花都区望成路11-4第1-4.5层&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	LEE NAN HEE （李兰熙）&nbsp;
+	            </td>
+	            <td>
+	            	LEENANHEE&nbsp;
+	            </td>
+	            <td>
+	            	13711389426&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州图拉米拉贸易有限公司&nbsp;</td>
+	            <td>440101400119269&nbsp;</td>
+	            <td>广州市花都区狮岭镇金狮大道东10号第2栋4楼办公室&nbsp;</td>
+	            <td>37591234&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	FRANCISCO JAVIER TORA MIRA&nbsp;
+	            </td>
+	            <td>
+	            	刘萍&nbsp;
+	            </td>
+	            <td>
+	            	18664876127&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州保兰德箱包皮具有限公司&nbsp;</td>
+	            <td>440101400029791&nbsp;</td>
+	            <td>广州市花都区狮岭镇联合迳口经济合作社107国道边厂房&nbsp;</td>
+	            <td>86916768&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	郭顺元&nbsp;
+	            </td>
+	            <td>
+	            	黎安平&nbsp;
+	            </td>
+	            <td>
+	            	15800270178&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州田密织造有限公司&nbsp;</td>
+	            <td>440121400000524&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴路42号&nbsp;</td>
+	            <td>18826400101&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	周俊&nbsp;
+	            </td>
+	            <td>
+	            	18122035191&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市莱斯力皮具有限公司&nbsp;</td>
+	            <td>440101400012108&nbsp;</td>
+	            <td>广州市花都区狮岭镇（合成村）花都南方（国际）工业城皮革皮具园南合三街4号&nbsp;</td>
+	            <td>86939326&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	徐晓敏&nbsp;
+	            </td>
+	            <td>
+	            	陈翠红&nbsp;
+	            </td>
+	            <td>
+	            	13710437366&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州好作风贸易有限公司&nbsp;</td>
+	            <td>440121400000452&nbsp;</td>
+	            <td>广州市花都区宝峰南路53第9层904房&nbsp;</td>
+	            <td>15914366067&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	黄海莹&nbsp;
+	            </td>
+	            <td>
+	            	15817096598&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市凌云企业管理咨询有限公司&nbsp;</td>
+	            <td>440101400036241&nbsp;</td>
+	            <td>广州市花都区狮岭国际皮革皮具城三期北区18号&nbsp;</td>
+	            <td>86911234&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	凌志芳&nbsp;
+	            </td>
+	            <td>
+	            	伍优佩&nbsp;
+	            </td>
+	            <td>
+	            	18122211839&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州胜铨机械设备有限责任公司&nbsp;</td>
+	            <td>440101400114264&nbsp;</td>
+	            <td>广州市花都区狮岭镇山前大道中65号&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	邱木荣&nbsp;
+	            </td>
+	            <td>
+	            	张美蓉&nbsp;
+	            </td>
+	            <td>
+	            	13632103018&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州昊璞皮具设计有限公司&nbsp;</td>
+	            <td>440101400145609&nbsp;</td>
+	            <td>广州市花都区狮岭大道东9第1栋铺56&nbsp;</td>
+	            <td>15017590301&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	KANG MOON SUN&nbsp;
+	            </td>
+	            <td>
+	            	KANGMOONSUN&nbsp;
+	            </td>
+	            <td>
+	            	13711389426&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州柏香皮具设计有限公司&nbsp;</td>
+	            <td>440101400128411&nbsp;</td>
+	            <td>广州市花都区狮岭镇金狮大道东C栋五楼一部分&nbsp;</td>
+	            <td>00000000&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	SHIN MYUNG KIL&nbsp;
+	            </td>
+	            <td>
+	            	SHINMYUNGKIL&nbsp;
+	            </td>
+	            <td>
+	            	13503050213&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">中国联合网络通信有限公司广州市分公司花都区狮岭镇富民路营业厅&nbsp;</td>
+	            <td>440000500007288&nbsp;</td>
+	            <td>广州市花都区狮岭镇富民路四街3号首层&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	朱春艳&nbsp;
+	            </td>
+	            <td>
+	            	庄波&nbsp;
+	            </td>
+	            <td>
+	            	18620018033&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">百胜餐饮（广东）有限公司丽莎广场餐厅&nbsp;</td>
+	            <td>440101400139577&nbsp;</td>
+	            <td>广州市花都区狮岭镇阳光大道东(自编金狮大道东4号)&nbsp;</td>
+	            <td>83588288&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	郑颖燕&nbsp;
+	            </td>
+	            <td>
+	            	何雁玲&nbsp;
+	            </td>
+	            <td>
+	            	13763393044&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州李延晟皮具有限公司&nbsp;</td>
+	            <td>440101400177670&nbsp;</td>
+	            <td>广州市花都区狮岭镇狮岭大道东9第2栋铺24及第2-4层&nbsp;</td>
+	            <td>13711389426&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	ANHYOUNGKYU&nbsp;
+	            </td>
+	            <td>
+	            	18663991223&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州高思柏手袋有限公司&nbsp;</td>
+	            <td>440101400024125&nbsp;</td>
+	            <td>广州市花都区狮岭镇度假村专用道北38号B1,B2,B3厂房&nbsp;</td>
+	            <td>66233222&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	黄志仁&nbsp;
+	            </td>
+	            <td>
+	            	张雪香&nbsp;
+	            </td>
+	            <td>
+	            	13538721198&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州胜毅贸易有限公司&nbsp;</td>
+	            <td>440121400001244&nbsp;</td>
+	            <td>广州市花都区狮岭镇狮岭皮革皮具城三期B区十一街三楼自编105号（自主申报）&nbsp;</td>
+	            <td>13760878414&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州毕优以麓国际贸易有限公司&nbsp;</td>
+	            <td>440121400001269&nbsp;</td>
+	            <td>广州市花都区狮岭镇吉祥街37号第四层&nbsp;</td>
+	            <td>15875347260&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市佳俊房地产开发有限公司&nbsp;</td>
+	            <td>440101400065672&nbsp;</td>
+	            <td>广州市花都区狮岭镇教育中路29号&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	邝准&nbsp;
+	            </td>
+	            <td>
+	            	何倩韫&nbsp;
+	            </td>
+	            <td>
+	            	13926082121&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市彦登贸易有限公司&nbsp;</td>
+	            <td>440101400132467&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴路&nbsp;</td>
+	            <td>00000000&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	吴秉璋&nbsp;
+	            </td>
+	            <td>
+	            	沈彩霞&nbsp;
+	            </td>
+	            <td>
+	            	1369427932&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">中国联合网络通信有限公司广州市分公司花都雄狮路营业厅&nbsp;</td>
+	            <td>440101400124008&nbsp;</td>
+	            <td>广州市花都区狮岭镇宝峰南路48号广州狮岭宝峰皮具材料城首层自编8-9号&nbsp;</td>
+	            <td>22992018&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	朱春艳&nbsp;
+	            </td>
+	            <td>
+	            	庄波&nbsp;
+	            </td>
+	            <td>
+	            	18620018033&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州纳唯诺实业有限公司&nbsp;</td>
+	            <td>440121400001373&nbsp;</td>
+	            <td>广州市花都区狮岭镇如意街60号第五层&nbsp;</td>
+	            <td>15875347261&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市花都协和眼镜机械有限公司&nbsp;</td>
+	            <td>440101400035636&nbsp;</td>
+	            <td>广州市花都区狮岭镇第二工业区&nbsp;</td>
+	            <td>86845667&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	林增涛&nbsp;
+	            </td>
+	            <td>
+	            	林增涛&nbsp;
+	            </td>
+	            <td>
+	            	13302333233&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市花都享忆五金制品有限公司&nbsp;</td>
+	            <td>440101400072893&nbsp;</td>
+	            <td>广州市花都区狮岭镇第二工业区第四街&nbsp;</td>
+	            <td>86846141&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	黄媛妃&nbsp;
+	            </td>
+	            <td>
+	            	顾明智&nbsp;
+	            </td>
+	            <td>
+	            	13926289599&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市花都宗荣眼镜工业有限公司&nbsp;</td>
+	            <td>440101400074823&nbsp;</td>
+	            <td>广州市花都区狮岭镇107国道西新区&nbsp;</td>
+	            <td>86911625&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	林增涛&nbsp;
+	            </td>
+	            <td>
+	            	林增涛&nbsp;
+	            </td>
+	            <td>
+	            	13302333233&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市古俪斯皮具有限公司&nbsp;</td>
+	            <td>440101400152201&nbsp;</td>
+	            <td>广州市花都区狮岭镇合成村自编宝峰路东一巷5号(金狮大道南)第3层&nbsp;</td>
+	            <td>00000000&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	朱翠霞&nbsp;
+	            </td>
+	            <td>
+	            	朱翠霞&nbsp;
+	            </td>
+	            <td>
+	            	18902211353&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州屈臣氏个人用品商店有限公司狮岭镇分店&nbsp;</td>
+	            <td>440101400134436&nbsp;</td>
+	            <td>广州市花都区狮岭镇自编东升东路67号D区101号铺首层一部分&nbsp;</td>
+	            <td>28336537&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	戴倩仪&nbsp;
+	            </td>
+	            <td>
+	            	严玉嫦&nbsp;
+	            </td>
+	            <td>
+	            	18688868392&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州大隆农渔业有限公司&nbsp;</td>
+	            <td>440101400098852&nbsp;</td>
+	            <td>广州市花都区狮岭镇义山村&nbsp;</td>
+	            <td>86837266&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	洪信嘉&nbsp;
+	            </td>
+	            <td>
+	            	李芬芳&nbsp;
+	            </td>
+	            <td>
+	            	13926210489&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">兴辉（广州）织造有限公司&nbsp;</td>
+	            <td>440101400025089&nbsp;</td>
+	            <td>广州市花都区狮岭镇永福路2号&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	黄隆辉&nbsp;
+	            </td>
+	            <td>
+	            	邹韶开&nbsp;
+	            </td>
+	            <td>
+	            	18929530308&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市安秀利皮具有限公司&nbsp;</td>
+	            <td>440101400145668&nbsp;</td>
+	            <td>广州市花都区狮岭镇联合村自编田心路5号B栋2层&nbsp;</td>
+	            <td>86918101&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	陈昉&nbsp;
+	            </td>
+	            <td>
+	            	曹洁仪&nbsp;
+	            </td>
+	            <td>
+	            	15915141633&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市祥泰行塑料饰品有限公司&nbsp;</td>
+	            <td>440101400039070&nbsp;</td>
+	            <td>广州市花都区狮岭镇合成村海布队工贸小区&nbsp;</td>
+	            <td>86929292&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	张尧文&nbsp;
+	            </td>
+	            <td>
+	            	刘建娣&nbsp;
+	            </td>
+	            <td>
+	            	13112238331&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市阿勒尕尔箱包有限公司&nbsp;</td>
+	            <td>440121400000330&nbsp;</td>
+	            <td>广州市花都区狮岭镇自编均合社宝峰路西145号第3层厂&nbsp;</td>
+	            <td>18925070219&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	ALGARDMATTHIEU&nbsp;
+	            </td>
+	            <td>
+	            	18925070219&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州桃树商贸有限公司&nbsp;</td>
+	            <td>440121400000991&nbsp;</td>
+	            <td>广州市花都区狮岭镇前进村石西新四街18号之一（自主申报）&nbsp;</td>
+	            <td>13828496817&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	庾惠玲&nbsp;
+	            </td>
+	            <td>
+	            	13902395810&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州汇顺展手袋有限公司&nbsp;</td>
+	            <td>440101400063794&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴工业区&nbsp;</td>
+	            <td>86845743&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	张宣浩&nbsp;
+	            </td>
+	            <td>
+	            	任玉葵&nbsp;
+	            </td>
+	            <td>
+	            	13138455555&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市彤林饰品企业有限公司&nbsp;</td>
+	            <td>440101400041224&nbsp;</td>
+	            <td>广州市花都区狮岭镇第二工业区&nbsp;</td>
+	            <td>86846641&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	黄丽美&nbsp;
+	            </td>
+	            <td>
+	            	王小荣&nbsp;
+	            </td>
+	            <td>
+	            	13640890830&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市万聚塑胶有限公司&nbsp;</td>
+	            <td>440101400114963&nbsp;</td>
+	            <td>广州市花都区狮岭镇107国道变电站南侧&nbsp;</td>
+	            <td>86910377&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	毕景志&nbsp;
+	            </td>
+	            <td>
+	            	李秀文&nbsp;
+	            </td>
+	            <td>
+	            	13570447618&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州鹰堡美发用品厂有限公司&nbsp;</td>
+	            <td>440101400073621&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴村振兴路&nbsp;</td>
+	            <td>86919911&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	李建荣&nbsp;
+	            </td>
+	            <td>
+	            	罗艳辉&nbsp;
+	            </td>
+	            <td>
+	            	13570209652&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市浡腾五金制品有限公司&nbsp;</td>
+	            <td>440101400061348&nbsp;</td>
+	            <td>广州市花都区狮岭镇第二工业区第四街&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	顾朝钦&nbsp;
+	            </td>
+	            <td>
+	            	庾惠兴&nbsp;
+	            </td>
+	            <td>
+	            	13538924544&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州米米韵织造有限公司&nbsp;</td>
+	            <td>440101400024150&nbsp;</td>
+	            <td>广州市花都区狮岭镇阳光路6号&nbsp;</td>
+	            <td>18024012021&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	熊健妗&nbsp;
+	            </td>
+	            <td>
+	            	汤永源&nbsp;
+	            </td>
+	            <td>
+	            	18024012021&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州科堡化妆品有限公司&nbsp;</td>
+	            <td>440101400090368&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴村双龙经济社村前路西厂区2号厂房&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	叶惠水&nbsp;
+	            </td>
+	            <td>
+	            	柯娇蓉&nbsp;
+	            </td>
+	            <td>
+	            	13711523126&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市闳丰旅游用品有限公司&nbsp;</td>
+	            <td>440101400094915&nbsp;</td>
+	            <td>广州市花都区狮岭镇狮岭大道东8-22&nbsp;</td>
+	            <td>36972667&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	梁子健&nbsp;
+	            </td>
+	            <td>
+	            	冯燕勤&nbsp;
+	            </td>
+	            <td>
+	            	13435856236&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州明亮商贸有限公司&nbsp;</td>
+	            <td>440121400000983&nbsp;</td>
+	            <td>广州市花都区狮岭镇宝峰南路16号（自主申报）&nbsp;</td>
+	            <td>15088057997&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	GURMEETSINGH&nbsp;
+	            </td>
+	            <td>
+	            	15088057997&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州相炫皮革设计有限公司&nbsp;</td>
+	            <td>440101400175768&nbsp;</td>
+	            <td>广州市花都区狮岭镇岭南工业聚集点商业三街44号第1层&nbsp;</td>
+	            <td>15017590301&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	PARKSANGHYUN&nbsp;
+	            </td>
+	            <td>
+	            	18520419587&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广东赛壹便利店有限公司第一百零七分店&nbsp;</td>
+	            <td>440000400001056&nbsp;</td>
+	            <td>广州市花都区狮岭镇狮岭大道西6号喜龙商务大厦首层1号商铺&nbsp;</td>
+	            <td>13682217694&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	柯健文&nbsp;
+	            </td>
+	            <td>
+	            	李卓&nbsp;
+	            </td>
+	            <td>
+	            	13682217694&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州佳利皮革有限公司&nbsp;</td>
+	            <td>440121400000508&nbsp;</td>
+	            <td>广州市花都区狮岭镇军田村一队21号二楼&nbsp;</td>
+	            <td>13610259947&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	赖进源&nbsp;
+	            </td>
+	            <td>
+	            	13610259947&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州骏智纸业有限公司&nbsp;</td>
+	            <td>440101400079645&nbsp;</td>
+	            <td>广州市花都区狮岭镇教育路&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	黄胜春&nbsp;
+	            </td>
+	            <td>
+	            	陆锡良&nbsp;
+	            </td>
+	            <td>
+	            	13922386021&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市花都瑞泰五金饰品有限公司&nbsp;</td>
+	            <td>440101400025273&nbsp;</td>
+	            <td>广州市花都区狮岭镇田心路&nbsp;</td>
+	            <td>86837266&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	张炳荣&nbsp;
+	            </td>
+	            <td>
+	            	陈雪莹&nbsp;
+	            </td>
+	            <td>
+	            	13602424164&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州花都日利眼镜机械工业有限公司&nbsp;</td>
+	            <td>440101400052102&nbsp;</td>
+	            <td>广州市花都区狮岭镇第二工业区&nbsp;</td>
+	            <td>86845864&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	杨朝翔&nbsp;
+	            </td>
+	            <td>
+	            	陈雪莹&nbsp;
+	            </td>
+	            <td>
+	            	13602424164&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市摩登皮具有限公司&nbsp;</td>
+	            <td>440101400022162&nbsp;</td>
+	            <td>广州市花都区狮岭镇金狮大道南&nbsp;</td>
+	            <td>86910003&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	刘晓东&nbsp;
+	            </td>
+	            <td>
+	            	占义军&nbsp;
+	            </td>
+	            <td>
+	            	13535270066&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州福屋贸易有限公司&nbsp;</td>
+	            <td>440101400080279&nbsp;</td>
+	            <td>广州市花都区狮岭镇宝峰南路53号1005房&nbsp;</td>
+	            <td>13710541701&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	OKABE MICHIE（岡辺美智栄）&nbsp;
+	            </td>
+	            <td>
+	            	黄燕平&nbsp;
+	            </td>
+	            <td>
+	            	137105417&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市啊里萨贸易有限公司&nbsp;</td>
+	            <td>440101400002484&nbsp;</td>
+	            <td>广州市花都区狮岭镇岭南工业聚集点商业一街42号房&nbsp;</td>
+	            <td>13922366151&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	王杨青&nbsp;
+	            </td>
+	            <td>
+	            	伍梅香&nbsp;
+	            </td>
+	            <td>
+	            	15813349065&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市黄家皮具有限公司&nbsp;</td>
+	            <td>440101400111692&nbsp;</td>
+	            <td>广州市花都区狮岭镇金狮大道南&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	黄发川&nbsp;
+	            </td>
+	            <td>
+	            	伍梅香&nbsp;
+	            </td>
+	            <td>
+	            	15813349065&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广东赛壹便利店有限公司第二百五十六分店&nbsp;</td>
+	            <td>440101400103414&nbsp;</td>
+	            <td>广州市花都区狮岭镇联合村狮岭（国际）皮革皮具城三期北广场13号之一、三期北广场13A号之一&nbsp;</td>
+	            <td>83647118&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	柯健文&nbsp;
+	            </td>
+	            <td>
+	            	李卓&nbsp;
+	            </td>
+	            <td>
+	            	13682217694&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广东赛壹便利店有限公司第一百九十六分店&nbsp;</td>
+	            <td>440000500005900&nbsp;</td>
+	            <td>广州市花都区狮岭镇宝峰南路48号狮岭宝峰皮具材料城自编首层A3商铺&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	柯健文&nbsp;
+	            </td>
+	            <td>
+	            	李卓&nbsp;
+	            </td>
+	            <td>
+	            	13682217694&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州松联鞋业有限公司&nbsp;</td>
+	            <td>440101400070357&nbsp;</td>
+	            <td>广州市花都区狮岭镇迳口路花都南方皮革皮具园南合一街11号&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	曹黄季如&nbsp;
+	            </td>
+	            <td>
+	            	黄燕芳&nbsp;
+	            </td>
+	            <td>
+	            	18022313667&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州洛珍贸易有限公司&nbsp;</td>
+	            <td>440101400144583&nbsp;</td>
+	            <td>广州市花都区狮岭镇岭南工业聚集点工业一路6号1栋第四层&nbsp;</td>
+	            <td>00000000&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	CHOI NAK HUN&nbsp;
+	            </td>
+	            <td>
+	            	梁英&nbsp;
+	            </td>
+	            <td>
+	            	18922774706&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州携嘉税务代理有限公司&nbsp;</td>
+	            <td>440121400001277&nbsp;</td>
+	            <td>广州市花都区狮岭镇吉祥街37号第三层&nbsp;</td>
+	            <td>13926290991&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州花卉之都农业有限公司&nbsp;</td>
+	            <td>440101400020825&nbsp;</td>
+	            <td>广州市花都区花城街芙蓉大道37号&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	方杰文&nbsp;
+	            </td>
+	            <td>
+	            	郑娟&nbsp;
+	            </td>
+	            <td>
+	            	15817039046&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州翠河商贸有限公司&nbsp;</td>
+	            <td>440121400001076&nbsp;</td>
+	            <td>广州市花都区狮岭镇联合村狮岭（国际）皮革皮具城三期A区九街29、31号&nbsp;</td>
+	            <td>13632183800&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	            <td>
+	            	&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">百胜餐饮（广东）有限公司广州必胜客狮岭宝峰餐厅&nbsp;</td>
+	            <td>440101400113260&nbsp;</td>
+	            <td>广州市花都区狮岭镇宝峰路2号&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	黄健&nbsp;
+	            </td>
+	            <td>
+	            	何雁玲&nbsp;
+	            </td>
+	            <td>
+	            	13763393044&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州铌豪饰品有限公司&nbsp;</td>
+	            <td>440101400011775&nbsp;</td>
+	            <td>广州市花都区狮岭镇龙泉西路四号二楼201房&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	蔡征宇&nbsp;
+	            </td>
+	            <td>
+	            	曹薇&nbsp;
+	            </td>
+	            <td>
+	            	13544520910&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州穑哲特皮革有限公司&nbsp;</td>
+	            <td>440101400024272&nbsp;</td>
+	            <td>广州市花都区狮岭镇岭南工业聚集点合和路30号首层&nbsp;</td>
+	            <td>83828948&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	SEO MYOUNG KI&nbsp;
+	            </td>
+	            <td>
+	            	SEOMYOUNGKI&nbsp;
+	            </td>
+	            <td>
+	            	15017590301&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市花都帅领饰品企业有限公司&nbsp;</td>
+	            <td>440101400061356&nbsp;</td>
+	            <td>广州市花都区狮岭镇第二工业区&nbsp;</td>
+	            <td>86846181&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	蔡明道&nbsp;
+	            </td>
+	            <td>
+	            	周惠玲&nbsp;
+	            </td>
+	            <td>
+	            	13719495559&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市太子置业有限公司&nbsp;</td>
+	            <td>440101400038165&nbsp;</td>
+	            <td>广州市花都区狮岭镇田心路&nbsp;</td>
+	            <td>86918101&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	朱德刚&nbsp;
+	            </td>
+	            <td>
+	            	陈雪莹&nbsp;
+	            </td>
+	            <td>
+	            	13602424164&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州全宇光学制品有限公司&nbsp;</td>
+	            <td>440101400063583&nbsp;</td>
+	            <td>广州市花都区狮岭镇龙泉西路四号&nbsp;</td>
+	            <td>86846187&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	蔡灿煌&nbsp;
+	            </td>
+	            <td>
+	            	曹薇&nbsp;
+	            </td>
+	            <td>
+	            	13544520910&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州中志橡胶科技有限公司&nbsp;</td>
+	            <td>440101400005680&nbsp;</td>
+	            <td>广州市花都区狮岭镇联合村&nbsp;</td>
+	            <td>88888888&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	陈俊雄&nbsp;
+	            </td>
+	            <td>
+	            	黄丽华&nbsp;
+	            </td>
+	            <td>
+	            	13570457469&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">百胜餐饮（广东）有限公司狮岭宝峰餐厅&nbsp;</td>
+	            <td>440101400086167&nbsp;</td>
+	            <td>广州市花都区狮岭镇宝峰路2号&nbsp;</td>
+	            <td>83588288&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	郑颖燕&nbsp;
+	            </td>
+	            <td>
+	            	何雁玲&nbsp;
+	            </td>
+	            <td>
+	            	13763393044&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州铨宇光学科技有限公司&nbsp;</td>
+	            <td>440101400093320&nbsp;</td>
+	            <td>广州市花都区狮岭镇龙泉西路四号&nbsp;</td>
+	            <td>86846187&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	蔡征宇&nbsp;
+	            </td>
+	            <td>
+	            	曹薇&nbsp;
+	            </td>
+	            <td>
+	            	13544520910&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市威尼皮具有限公司&nbsp;</td>
+	            <td>440101400080061&nbsp;</td>
+	            <td>广州市花都区狮岭镇振兴村工业区一号&nbsp;</td>
+	            <td>86910180&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	李记行&nbsp;
+	            </td>
+	            <td>
+	            	冯小丹&nbsp;
+	            </td>
+	            <td>
+	            	13724098597&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州沁全贸易有限公司&nbsp;</td>
+	            <td>440101400117966&nbsp;</td>
+	            <td>广州市花都区狮岭镇迳口路花都南方皮革皮具园南合一街13号二楼&nbsp;</td>
+	            <td>86906886&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	SANDRO PARISOTTO&nbsp;
+	            </td>
+	            <td>
+	            	黄燕芳&nbsp;
+	            </td>
+	            <td>
+	            	18022313667&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">广州市利点眼镜有限公司&nbsp;</td>
+	            <td>440101400119017&nbsp;</td>
+	            <td>广州市花都区狮岭镇第二工业区&nbsp;</td>
+	            <td>86846183&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	王钦木&nbsp;
+	            </td>
+	            <td>
+	            	康小兰&nbsp;
+	            </td>
+	            <td>
+	            	15815855286&nbsp;
+	            </td>
+	        </tr>
+        
+	        <tr>
+	        	<td align="left">青岛爱包花饰有限公司狮岭分公司&nbsp;</td>
+	            <td>440101400114615&nbsp;</td>
+	            <td>广州市花都区狮岭镇自编合和路164号第3层&nbsp;</td>
+	            <td>13527746828&nbsp;</td>
+	            <td>
+		        	
+	            	<span >未填报</span>	
+	            		
+	                &nbsp;</td>
+	            <td>&nbsp;</td>
+	            <td>
+	            	广州市工商行政管理局花都分局狮岭所&nbsp;
+	            </td>
+	            <td>
+	            	藤川和也&nbsp;
+	            </td>
+	            <td>
+	            	刘丽丹&nbsp;
+	            </td>
+	            <td>
+	            	13527691783&nbsp;
+	            </td>
+	        </tr>
+         
+</table>
+
+
+	</body>
+</html>
